@@ -2,11 +2,15 @@
 # -*- coding: utf-8 -*-
 
 import json
-import time
+import logging
 import requests
+from contextlib import asynccontextmanager
 from datetime import datetime, timedelta
 from dateutil import parser
 from pathlib import Path
+from threading import Event, Thread
+
+from fastapi import FastAPI, Response
 
 # ==========================
 # CONFIG STATICA
@@ -21,6 +25,35 @@ CHECK_EVERY_SECONDS = 300      # 5 minuti
 TIME_TOLERANCE_MINUTES = 2     # ±2 minuti
 
 TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+
+logger = logging.getLogger("alert_bet")
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    global cron_thread
+    if not cron_thread or not cron_thread.is_alive():
+        stop_event.clear()
+        cron_thread = Thread(target=_cron_loop, daemon=True)
+        cron_thread.start()
+        logger.info("🧵 Thread cron avviato")
+
+    try:
+        yield
+    finally:
+        stop_event.set()
+        if cron_thread and cron_thread.is_alive():
+            cron_thread.join(timeout=CHECK_EVERY_SECONDS)
+            logger.info("🧵 Thread cron arrestato")
+
+
+app = FastAPI(title="Alert Bet API", lifespan=lifespan)
+stop_event = Event()
+cron_thread: Thread | None = None
 
 # ==========================
 # TELEGRAM
@@ -78,15 +111,21 @@ def check_and_send_alerts():
 # ==========================
 # LOOP
 # ==========================
-def run():
-    print("🚀 Telegram Alert Server attivo (chat_id fissa)")
-    while True:
-        print("🕓 Nuova iterazione cron:", datetime.now().isoformat())
+def _cron_loop():
+    logger.info("🚀 Cron loop attivo")
+    while not stop_event.is_set():
+        logger.info("🕓 Nuova iterazione cron: %s", datetime.now().isoformat())
         try:
             check_and_send_alerts()
-        except Exception as e:
-            print("❌ Errore:", e)
-        time.sleep(CHECK_EVERY_SECONDS)
+        except Exception:
+            logger.exception("❌ Errore durante l'invio degli alert")
 
-if __name__ == "__main__":
-    run()
+        if stop_event.wait(CHECK_EVERY_SECONDS):
+            break
+
+    logger.info("🛑 Cron loop terminato")
+
+
+@app.head("/health")
+async def health_check():
+    return Response(status_code=200)
