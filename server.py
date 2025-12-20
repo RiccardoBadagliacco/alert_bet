@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import os
 import json
 import logging
 import requests
@@ -13,10 +14,10 @@ from threading import Event, Thread
 from fastapi import FastAPI, Response
 
 # ==========================
-# CONFIG STATICA
+# CONFIG (ENV VARS - RENDER SAFE)
 # ==========================
-BOT_TOKEN = "8168882419:AAGJAutgGoERpvNV6x45DY3J1CjzUyYsiZI"
-CHAT_ID = 28388796   # 🔒 CHAT ID FISSA
+BOT_TOKEN = os.environ["BOT_TOKEN"]           # 🔐 DA RENDER
+CHAT_ID = int(os.environ["CHAT_ID"])          # 🔐 DA RENDER
 
 FIXTURES_FILE = Path("./fixtures_alert_over25.json")
 SENT_ALERTS_FILE = Path("./sent_alerts.json")
@@ -26,6 +27,9 @@ TIME_TOLERANCE_MINUTES = 2     # ±2 minuti
 
 TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 
+# ==========================
+# LOGGING
+# ==========================
 logger = logging.getLogger("alert_bet")
 logging.basicConfig(
     level=logging.INFO,
@@ -33,9 +37,16 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 
+# ==========================
+# FASTAPI LIFESPAN
+# ==========================
+stop_event = Event()
+cron_thread: Thread | None = None
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global cron_thread
+
     if not cron_thread or not cron_thread.is_alive():
         stop_event.clear()
         cron_thread = Thread(target=_cron_loop, daemon=True)
@@ -50,10 +61,7 @@ async def lifespan(app: FastAPI):
             cron_thread.join(timeout=CHECK_EVERY_SECONDS)
             logger.info("🧵 Thread cron arrestato")
 
-
 app = FastAPI(title="Alert Bet API", lifespan=lifespan)
-stop_event = Event()
-cron_thread: Thread | None = None
 
 # ==========================
 # TELEGRAM
@@ -79,7 +87,7 @@ def save_sent_alerts(sent_ids):
     SENT_ALERTS_FILE.write_text(json.dumps(list(sent_ids), indent=2))
 
 # ==========================
-# CORE
+# CORE LOGIC
 # ==========================
 def check_and_send_alerts():
     now = datetime.now()
@@ -109,7 +117,7 @@ def check_and_send_alerts():
     save_sent_alerts(sent_alerts)
 
 # ==========================
-# LOOP
+# CRON LOOP
 # ==========================
 def _cron_loop():
     logger.info("🚀 Cron loop attivo")
@@ -125,7 +133,13 @@ def _cron_loop():
 
     logger.info("🛑 Cron loop terminato")
 
-
+# ==========================
+# HEALTHCHECK (RENDER)
+# ==========================
 @app.head("/health")
 async def health_check():
     return Response(status_code=200)
+
+@app.get("/")
+async def root():
+    return {"status": "ok"}
