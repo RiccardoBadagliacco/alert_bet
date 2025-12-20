@@ -140,6 +140,10 @@ def _cron_loop():
 async def health_check():
     return Response(status_code=200)
 
+@app.get("/health")
+async def health_check_get():
+    return {"status": "ok"}
+
 @app.get("/")
 async def root():
     return {"status": "ok"}
