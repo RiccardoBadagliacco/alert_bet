@@ -1,9 +1,9 @@
 [
   {
-    "match_id":"60af4b7a-4094-4c04-a139-c1cb158c08aa",
+    "match_id":"39eb7c92-0c1c-4ac0-89b4-44d38ef039d1",
     "match_date":"2025-12-19",
     "match_time":"20:15",
-    "alert_datetime":"2025-12-19T12:29",
+    "alert_datetime":"2025-12-19T21:10",
     "home_team":"Estoril",
     "away_team":"Sp Braga",
     "league_code":"P1",
@@ -11,7 +11,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"ce10b2d0-23fa-4607-92b5-0b9b36cbe03e",
+    "match_id":"d4731f2a-685f-43d1-ab67-63674d2e0130",
     "match_date":"2025-12-20",
     "match_time":"11:30",
     "alert_datetime":"2025-12-20T12:25",
@@ -22,18 +22,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"327f280b-deeb-4056-a27f-cf49d5728d85",
-    "match_date":"2025-12-20",
-    "match_time":"12:00",
-    "alert_datetime":"2025-12-20T12:55",
-    "home_team":"Bochum",
-    "away_team":"Karlsruhe",
-    "league_code":"D2",
-    "league_name":"2. Bundesliga",
-    "alert_market":"OVER25"
-  },
-  {
-    "match_id":"a50f9833-b4da-4191-a0b2-404ad105399b",
+    "match_id":"e83972d1-b0ec-456d-b037-01729452f273",
     "match_date":"2025-12-20",
     "match_time":"12:00",
     "alert_datetime":"2025-12-20T12:55",
@@ -44,7 +33,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"01d03954-b010-46b9-b806-96feaffc9928",
+    "match_id":"a26e2998-2ae5-4bc1-8e44-0c843d4574b5",
     "match_date":"2025-12-20",
     "match_time":"12:00",
     "alert_datetime":"2025-12-20T12:55",
@@ -55,7 +44,18 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"48982bc2-59fd-44d3-b288-7d38be532686",
+    "match_id":"242a028e-d819-4c39-a568-033953c80682",
+    "match_date":"2025-12-20",
+    "match_time":"12:00",
+    "alert_datetime":"2025-12-20T12:55",
+    "home_team":"Bochum",
+    "away_team":"Karlsruhe",
+    "league_code":"D2",
+    "league_name":"2. Bundesliga",
+    "alert_market":"OVER25"
+  },
+  {
+    "match_id":"42de8c76-b537-48d3-b1db-7dc0231b566f",
     "match_date":"2025-12-20",
     "match_time":"12:30",
     "alert_datetime":"2025-12-20T13:25",
@@ -66,7 +66,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"21a692f7-d2d1-4233-8fdc-c9fb5904755f",
+    "match_id":"2a1d928a-27f3-44da-bffb-2a6f1c28fd40",
     "match_date":"2025-12-20",
     "match_time":"13:00",
     "alert_datetime":"2025-12-20T13:55",
@@ -77,18 +77,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"430be5e2-afdc-4f66-8124-10fa56c95bc1",
-    "match_date":"2025-12-20",
-    "match_time":"14:00",
-    "alert_datetime":"2025-12-20T14:55",
-    "home_team":"Frosinone",
-    "away_team":"Spezia",
-    "league_code":"I2",
-    "league_name":"Serie B",
-    "alert_market":"OVER25"
-  },
-  {
-    "match_id":"d4f138cd-a496-4579-a9d6-cc42919b2444",
+    "match_id":"cb0d5cd3-803d-4f84-b129-20efe82c3616",
     "match_date":"2025-12-20",
     "match_time":"14:00",
     "alert_datetime":"2025-12-20T14:55",
@@ -99,7 +88,18 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"cf501c15-1ed1-450e-a956-99cf14aa08bd",
+    "match_id":"3adf1b62-ae22-4b4f-863f-5bdf19a98184",
+    "match_date":"2025-12-20",
+    "match_time":"14:00",
+    "alert_datetime":"2025-12-20T14:55",
+    "home_team":"Frosinone",
+    "away_team":"Spezia",
+    "league_code":"I2",
+    "league_name":"Serie B",
+    "alert_market":"OVER25"
+  },
+  {
+    "match_id":"2a836dec-579f-4ea4-bcf9-c126c44818ba",
     "match_date":"2025-12-20",
     "match_time":"14:30",
     "alert_datetime":"2025-12-20T15:25",
@@ -110,40 +110,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"a26bbf1b-9da8-44cf-a790-7bc915b79ef0",
-    "match_date":"2025-12-20",
-    "match_time":"14:30",
-    "alert_datetime":"2025-12-20T15:25",
-    "home_team":"Hamburg",
-    "away_team":"Ein Frankfurt",
-    "league_code":"D1",
-    "league_name":"Bundesliga",
-    "alert_market":"OVER25"
-  },
-  {
-    "match_id":"86c71fbb-5e8d-411a-9156-fd577402a82d",
-    "match_date":"2025-12-20",
-    "match_time":"14:30",
-    "alert_datetime":"2025-12-20T15:25",
-    "home_team":"FC Koln",
-    "away_team":"Union Berlin",
-    "league_code":"D1",
-    "league_name":"Bundesliga",
-    "alert_market":"OVER25"
-  },
-  {
-    "match_id":"c2ed1e2c-f864-44d7-99f4-37df509981a8",
-    "match_date":"2025-12-20",
-    "match_time":"14:30",
-    "alert_datetime":"2025-12-20T15:25",
-    "home_team":"Augsburg",
-    "away_team":"Werder Bremen",
-    "league_code":"D1",
-    "league_name":"Bundesliga",
-    "alert_market":"OVER25"
-  },
-  {
-    "match_id":"bbf877b4-fe81-4890-ac03-4b300e79941a",
+    "match_id":"18f86139-5219-4586-b495-da254edf0a70",
     "match_date":"2025-12-20",
     "match_time":"14:30",
     "alert_datetime":"2025-12-20T15:25",
@@ -154,62 +121,40 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"3c9967e9-b8c6-4969-b56a-1670bb8975d0",
+    "match_id":"3d0e0d29-39a6-4b4a-ad8a-bb8d12a4ca44",
     "match_date":"2025-12-20",
-    "match_time":"15:00",
-    "alert_datetime":"2025-12-20T15:55",
-    "home_team":"Motherwell",
-    "away_team":"Dundee",
-    "league_code":"SC0",
-    "league_name":"Premier League",
+    "match_time":"14:30",
+    "alert_datetime":"2025-12-20T15:25",
+    "home_team":"FC Koln",
+    "away_team":"Union Berlin",
+    "league_code":"D1",
+    "league_name":"Bundesliga",
     "alert_market":"OVER25"
   },
   {
-    "match_id":"3858e7bd-ca82-49c5-9790-6765a19fbde6",
+    "match_id":"293130c2-9428-46d6-999b-87201f6bd989",
     "match_date":"2025-12-20",
-    "match_time":"15:00",
-    "alert_datetime":"2025-12-20T15:55",
-    "home_team":"QPR",
-    "away_team":"Leicester",
-    "league_code":"E1",
-    "league_name":"Championship",
+    "match_time":"14:30",
+    "alert_datetime":"2025-12-20T15:25",
+    "home_team":"Augsburg",
+    "away_team":"Werder Bremen",
+    "league_code":"D1",
+    "league_name":"Bundesliga",
     "alert_market":"OVER25"
   },
   {
-    "match_id":"b1a361e5-f360-4249-b9cd-8cb7be69ca50",
+    "match_id":"a6ce3c54-ebad-43b5-93b0-0b54dad44226",
     "match_date":"2025-12-20",
-    "match_time":"15:00",
-    "alert_datetime":"2025-12-20T15:55",
-    "home_team":"Ipswich",
-    "away_team":"Sheffield Weds",
-    "league_code":"E1",
-    "league_name":"Championship",
+    "match_time":"14:30",
+    "alert_datetime":"2025-12-20T15:25",
+    "home_team":"Hamburg",
+    "away_team":"Ein Frankfurt",
+    "league_code":"D1",
+    "league_name":"Bundesliga",
     "alert_market":"OVER25"
   },
   {
-    "match_id":"12cbc2e4-216c-4da3-ab84-8fb3b242f5b4",
-    "match_date":"2025-12-20",
-    "match_time":"15:00",
-    "alert_datetime":"2025-12-20T15:55",
-    "home_team":"Bournemouth",
-    "away_team":"Burnley",
-    "league_code":"E0",
-    "league_name":"Premier League",
-    "alert_market":"OVER25"
-  },
-  {
-    "match_id":"97896a84-e9c6-4d19-98d7-5e0a8a301ba6",
-    "match_date":"2025-12-20",
-    "match_time":"15:00",
-    "alert_datetime":"2025-12-20T15:55",
-    "home_team":"Man City",
-    "away_team":"West Ham",
-    "league_code":"E0",
-    "league_name":"Premier League",
-    "alert_market":"OVER25"
-  },
-  {
-    "match_id":"0145aa0f-c9ff-4a53-8520-81e793686af2",
+    "match_id":"b6a70c4d-f709-4762-b119-49f701f52451",
     "match_date":"2025-12-20",
     "match_time":"15:00",
     "alert_datetime":"2025-12-20T15:55",
@@ -220,7 +165,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"a03a2954-b7e6-43f8-b0e7-073420b58b2d",
+    "match_id":"ca1bedf3-e6e3-41c1-943a-1f8e95520521",
     "match_date":"2025-12-20",
     "match_time":"15:00",
     "alert_datetime":"2025-12-20T15:55",
@@ -231,7 +176,62 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"9470ee2f-5511-477f-9b24-49380291144a",
+    "match_id":"b8043fe7-49cb-4564-a83f-5ac9a94bc515",
+    "match_date":"2025-12-20",
+    "match_time":"15:00",
+    "alert_datetime":"2025-12-20T15:55",
+    "home_team":"QPR",
+    "away_team":"Leicester",
+    "league_code":"E1",
+    "league_name":"Championship",
+    "alert_market":"OVER25"
+  },
+  {
+    "match_id":"4ab392e0-a142-4307-8f49-b9be89d1ad34",
+    "match_date":"2025-12-20",
+    "match_time":"15:00",
+    "alert_datetime":"2025-12-20T15:55",
+    "home_team":"Ipswich",
+    "away_team":"Sheffield Weds",
+    "league_code":"E1",
+    "league_name":"Championship",
+    "alert_market":"OVER25"
+  },
+  {
+    "match_id":"df0761b5-3a58-40a8-9284-efa16dd8b605",
+    "match_date":"2025-12-20",
+    "match_time":"15:00",
+    "alert_datetime":"2025-12-20T15:55",
+    "home_team":"Motherwell",
+    "away_team":"Dundee",
+    "league_code":"SC0",
+    "league_name":"Premier League",
+    "alert_market":"OVER25"
+  },
+  {
+    "match_id":"d90ff8b4-0edb-4140-896b-2b634c2eb949",
+    "match_date":"2025-12-20",
+    "match_time":"15:00",
+    "alert_datetime":"2025-12-20T15:55",
+    "home_team":"Man City",
+    "away_team":"West Ham",
+    "league_code":"E0",
+    "league_name":"Premier League",
+    "alert_market":"OVER25"
+  },
+  {
+    "match_id":"7de6c299-9630-4f48-bc6a-e2a79756c3ae",
+    "match_date":"2025-12-20",
+    "match_time":"15:00",
+    "alert_datetime":"2025-12-20T15:55",
+    "home_team":"Bournemouth",
+    "away_team":"Burnley",
+    "league_code":"E0",
+    "league_name":"Premier League",
+    "alert_market":"OVER25"
+  },
+  {
+    "match_id":"6cfacb2a-b757-4da4-a944-e154af817e85",
     "match_date":"2025-12-20",
     "match_time":"15:15",
     "alert_datetime":"2025-12-20T16:10",
@@ -242,7 +242,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"d2682878-4551-4872-874d-c05be6124501",
+    "match_id":"2b7ff8ed-6b4f-433a-8df6-865b9d2c6b9d",
     "match_date":"2025-12-20",
     "match_time":"15:15",
     "alert_datetime":"2025-12-20T16:10",
@@ -253,7 +253,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"836d1bb6-c4d0-41a1-813d-7de390498841",
+    "match_id":"36d3efcd-b71c-4086-a0cf-14edfd6695af",
     "match_date":"2025-12-20",
     "match_time":"15:30",
     "alert_datetime":"2025-12-20T16:25",
@@ -264,7 +264,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"7d378914-347a-4522-8c45-2925fa19a77b",
+    "match_id":"e3d9d32b-d26c-4a77-acf0-ae0fc3a5a249",
     "match_date":"2025-12-20",
     "match_time":"17:00",
     "alert_datetime":"2025-12-20T17:55",
@@ -275,7 +275,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"02c5f256-dec2-43ff-be34-c2f84ffb5b51",
+    "match_id":"85f59dff-b282-4835-832f-17391d1f4d48",
     "match_date":"2025-12-20",
     "match_time":"17:30",
     "alert_datetime":"2025-12-20T18:25",
@@ -286,7 +286,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"9fde166f-aac1-4091-b7b6-170db1a1d352",
+    "match_id":"410db7d0-a32e-446c-972e-fe53aeb6454d",
     "match_date":"2025-12-20",
     "match_time":"17:30",
     "alert_datetime":"2025-12-20T18:25",
@@ -297,7 +297,18 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"4a0f969c-529c-4edb-a40b-1b880a7250a0",
+    "match_id":"ba995a3c-1096-4165-bba3-fde692b692b0",
+    "match_date":"2025-12-20",
+    "match_time":"18:30",
+    "alert_datetime":"2025-12-20T19:25",
+    "home_team":"Olympiakos",
+    "away_team":"Kifisia",
+    "league_code":"G1",
+    "league_name":"Super League",
+    "alert_market":"OVER25"
+  },
+  {
+    "match_id":"99b4b073-89d0-41d2-8f38-f740db4fcd72",
     "match_date":"2025-12-20",
     "match_time":"19:00",
     "alert_datetime":"2025-12-20T19:55",
@@ -308,7 +319,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"f39e01be-aa91-4652-866d-041e2378565f",
+    "match_id":"a2fa3fc9-8206-4ab4-a65f-8d936e51ee42",
     "match_date":"2025-12-20",
     "match_time":"19:30",
     "alert_datetime":"2025-12-20T20:25",
@@ -319,7 +330,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"f713e644-3410-4e83-bf65-159de50e10dd",
+    "match_id":"bf7093f4-c18f-4e0b-8e3b-79b47fb953c3",
     "match_date":"2025-12-20",
     "match_time":"19:45",
     "alert_datetime":"2025-12-20T20:40",
@@ -330,7 +341,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"4f957875-b3f4-4468-b18a-f8e8ccbf1d8e",
+    "match_id":"bc8c333e-1e19-4a18-9ab9-0e0ed98c2ed4",
     "match_date":"2025-12-20",
     "match_time":"20:00",
     "alert_datetime":"2025-12-20T20:55",
@@ -341,18 +352,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"ab9facd3-77d1-4721-a7ea-a7982b6c48eb",
-    "match_date":"2025-12-20",
-    "match_time":"20:00",
-    "alert_datetime":"2025-12-20T20:55",
-    "home_team":"Real Madrid",
-    "away_team":"Sevilla",
-    "league_code":"SP1",
-    "league_name":"La Liga",
-    "alert_market":"OVER25"
-  },
-  {
-    "match_id":"0e9af476-4f12-49e2-941d-877a1b2c01df",
+    "match_id":"bae20cd4-2c79-454c-946f-83c0a92029e9",
     "match_date":"2025-12-20",
     "match_time":"20:00",
     "alert_datetime":"2025-12-20T20:55",
@@ -363,7 +363,18 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"908f206c-010d-4a12-aaf2-9c4d7c7698aa",
+    "match_id":"9afc6940-4db5-4d93-9f80-c62f50abc02f",
+    "match_date":"2025-12-20",
+    "match_time":"20:00",
+    "alert_datetime":"2025-12-20T20:55",
+    "home_team":"Real Madrid",
+    "away_team":"Sevilla",
+    "league_code":"SP1",
+    "league_name":"La Liga",
+    "alert_market":"OVER25"
+  },
+  {
+    "match_id":"0109a539-e8a6-434a-8cad-bb3dee3eaf37",
     "match_date":"2025-12-20",
     "match_time":"20:30",
     "alert_datetime":"2025-12-20T21:25",
@@ -374,7 +385,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"fd6cf8f5-d8f0-4eef-bc5c-a1b03b748538",
+    "match_id":"4dee479f-6851-4bea-ab5a-284acdfc90c5",
     "match_date":"2025-12-21",
     "match_time":"11:15",
     "alert_datetime":"2025-12-21T12:10",
@@ -385,18 +396,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"c54af386-af3c-419c-bc93-278cf5372d6e",
-    "match_date":"2025-12-21",
-    "match_time":"12:30",
-    "alert_datetime":"2025-12-21T13:25",
-    "home_team":"Club Brugge",
-    "away_team":"Gent",
-    "league_code":"B1",
-    "league_name":"Jupiler Pro League",
-    "alert_market":"OVER25"
-  },
-  {
-    "match_id":"ec840baa-01b0-43c5-b243-cb590ac8d04a",
+    "match_id":"1b622095-ff13-4298-8e91-4a3610dc5f67",
     "match_date":"2025-12-21",
     "match_time":"12:30",
     "alert_datetime":"2025-12-21T13:25",
@@ -407,7 +407,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"a7980f7f-271c-43cd-a0b0-d50284e715d6",
+    "match_id":"b78cf943-24e7-4e40-828c-3e238dd059c7",
     "match_date":"2025-12-21",
     "match_time":"12:30",
     "alert_datetime":"2025-12-21T13:25",
@@ -418,7 +418,18 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"caf924fa-62a1-47ff-9c27-b8d0ebd647e0",
+    "match_id":"7df81ac4-9b4d-47bd-bce5-72b48299c00d",
+    "match_date":"2025-12-21",
+    "match_time":"12:30",
+    "alert_datetime":"2025-12-21T13:25",
+    "home_team":"Club Brugge",
+    "away_team":"Gent",
+    "league_code":"B1",
+    "league_name":"Jupiler Pro League",
+    "alert_market":"OVER25"
+  },
+  {
+    "match_id":"c0976d4b-db04-474f-9506-74e4ef1f184d",
     "match_date":"2025-12-21",
     "match_time":"13:00",
     "alert_datetime":"2025-12-21T13:55",
@@ -429,7 +440,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"1174ca6b-6c63-44f1-810b-473f711ec8c0",
+    "match_id":"eba9b415-8a27-4fbe-989a-14ce48949f90",
     "match_date":"2025-12-21",
     "match_time":"13:00",
     "alert_datetime":"2025-12-21T13:55",
@@ -440,7 +451,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"849b1b8f-96be-4c15-9a1e-87df0b84e822",
+    "match_id":"0897e157-d449-4fc4-811f-c1519fcebf6d",
     "match_date":"2025-12-21",
     "match_time":"13:30",
     "alert_datetime":"2025-12-21T14:25",
@@ -451,7 +462,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"d0ba9fa3-abf2-4b5f-a255-e128b5c52673",
+    "match_id":"ce7cfe1c-7209-4558-868c-1c9c9f962368",
     "match_date":"2025-12-21",
     "match_time":"13:30",
     "alert_datetime":"2025-12-21T14:25",
@@ -462,7 +473,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"78fa7b3c-3901-41dc-9a36-e7c3b79c97f6",
+    "match_id":"9465beaa-2be8-4234-9184-76f4848990d1",
     "match_date":"2025-12-21",
     "match_time":"14:00",
     "alert_datetime":"2025-12-21T14:55",
@@ -473,7 +484,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"050b3933-1d09-4d98-a965-cdc53644a4d6",
+    "match_id":"5f4396e8-6f42-471b-be83-f96b05b1a606",
     "match_date":"2025-12-21",
     "match_time":"15:15",
     "alert_datetime":"2025-12-21T16:10",
@@ -484,7 +495,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"b2fec682-5617-4058-ae14-6dff5a62822a",
+    "match_id":"8363a89e-6ac8-4717-801c-0af9d0b80bcf",
     "match_date":"2025-12-21",
     "match_time":"15:30",
     "alert_datetime":"2025-12-21T16:25",
@@ -495,7 +506,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"7d287ff8-2cd0-48cc-adbe-e310278c24e3",
+    "match_id":"8292932a-3c27-4309-bc02-8c8a538a3028",
     "match_date":"2025-12-21",
     "match_time":"15:45",
     "alert_datetime":"2025-12-21T16:40",
@@ -506,7 +517,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"8ef29c68-1ed4-44a2-8862-a1ed67ff4069",
+    "match_id":"1800845b-5227-4f80-b24d-0d0d41d8bcda",
     "match_date":"2025-12-21",
     "match_time":"16:15",
     "alert_datetime":"2025-12-21T17:10",
@@ -517,7 +528,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"7ddde785-b4c2-4dd1-a0f3-3a04fb8764cb",
+    "match_id":"f336fa5e-6185-4bae-988b-d331e0fa561f",
     "match_date":"2025-12-21",
     "match_time":"16:30",
     "alert_datetime":"2025-12-21T17:25",
@@ -528,7 +539,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"7508cde7-1a02-4770-a3db-3b9062f872eb",
+    "match_id":"4109a1b7-7edb-479b-af6e-5afc036146d2",
     "match_date":"2025-12-21",
     "match_time":"17:00",
     "alert_datetime":"2025-12-21T17:55",
@@ -539,7 +550,18 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"f7ac9560-3425-42f8-ab73-7843845c6740",
+    "match_id":"068f7d11-870a-418e-8246-3868494cb1e7",
+    "match_date":"2025-12-21",
+    "match_time":"17:30",
+    "alert_datetime":"2025-12-21T18:25",
+    "home_team":"PAOK",
+    "away_team":"Panathinaikos",
+    "league_code":"G1",
+    "league_name":"Super League",
+    "alert_market":"OVER25"
+  },
+  {
+    "match_id":"151d529c-49b9-40d4-988b-b5c95a55249c",
     "match_date":"2025-12-21",
     "match_time":"18:15",
     "alert_datetime":"2025-12-21T19:10",
@@ -550,7 +572,29 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"fd3834d7-69a9-48e0-89f6-bf7274942b9d",
+    "match_id":"53e9f0e4-19d0-449c-ac96-c32e1b36dad3",
+    "match_date":"2025-12-21",
+    "match_time":"19:00",
+    "alert_datetime":"2025-12-21T19:55",
+    "home_team":"AEK",
+    "away_team":"OFI Crete",
+    "league_code":"G1",
+    "league_name":"Super League",
+    "alert_market":"OVER25"
+  },
+  {
+    "match_id":"d42374da-43ae-4e1d-b9d4-326226a53a5b",
+    "match_date":"2025-12-21",
+    "match_time":"19:45",
+    "alert_datetime":"2025-12-21T20:40",
+    "home_team":"Genoa",
+    "away_team":"Atalanta",
+    "league_code":"I1",
+    "league_name":"Serie A",
+    "alert_market":"OVER25"
+  },
+  {
+    "match_id":"b19a5102-2bb5-4a63-90d8-4abf4c5392ca",
     "match_date":"2025-12-22",
     "match_time":"14:00",
     "alert_datetime":"2025-12-22T14:55",
@@ -561,7 +605,29 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"e22423cd-85f8-4845-b27b-09440fb448d5",
+    "match_id":"925e6908-180f-4d8f-b69b-157831196e01",
+    "match_date":"2025-12-22",
+    "match_time":"16:00",
+    "alert_datetime":"2025-12-22T16:55",
+    "home_team":"Panserraikos",
+    "away_team":"Levadeiakos",
+    "league_code":"G1",
+    "league_name":"Super League",
+    "alert_market":"OVER25"
+  },
+  {
+    "match_id":"d8c70e15-2a33-4143-a7f4-d3137e53bb2e",
+    "match_date":"2025-12-22",
+    "match_time":"18:00",
+    "alert_datetime":"2025-12-22T18:55",
+    "home_team":"Univ. Craiova",
+    "away_team":"Csikszereda M. Ciuc",
+    "league_code":"ROU",
+    "league_name":"Superliga ",
+    "alert_market":"OVER25"
+  },
+  {
+    "match_id":"5304b4f7-48b1-4710-89df-719ba7228345",
     "match_date":"2025-12-22",
     "match_time":"20:00",
     "alert_datetime":"2025-12-22T20:55",
@@ -572,7 +638,7 @@
     "alert_market":"OVER25"
   },
   {
-    "match_id":"ed914af9-7048-44d0-bc0a-f6f5ee9c66c7",
+    "match_id":"d1eb56dc-4047-42ac-b5c4-4ffe0e1ea6eb",
     "match_date":"2025-12-23",
     "match_time":"20:45",
     "alert_datetime":"2025-12-23T21:40",
