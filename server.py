@@ -95,7 +95,7 @@ def check_and_send_alerts():
 
     sent_alerts = load_sent_alerts()
     fixtures = json.loads(FIXTURES_FILE.read_text())
-
+    logger.info("🔍 Controllo alert per %d fixtures", len(fixtures))
     for f in fixtures:
         match_id = f["match_id"]
         if match_id in sent_alerts:
