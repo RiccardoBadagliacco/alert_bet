@@ -102,8 +102,10 @@ def check_and_send_alerts():
             continue
 
         alert_time = parser.isoparse(f["alert_datetime"])
+        print(now, alert_time, abs(now - alert_time), tolerance)
 
         if abs(now - alert_time) <= tolerance:
+            print("Sending alert for match:", match_id)
             message = (
                 f"🔥 *ALERT OVER 2.5*\n\n"
                 f"*{f['home_team']}* vs *{f['away_team']}*\n"
