@@ -96,16 +96,18 @@ def check_and_send_alerts():
     sent_alerts = load_sent_alerts()
     fixtures = json.loads(FIXTURES_FILE.read_text())
     logger.info("🔍 Controllo alert per %d fixtures", len(fixtures))
+    matches_to_send = []
     for f in fixtures:
         match_id = f["match_id"]
         if match_id in sent_alerts:
             continue
 
         alert_time = parser.isoparse(f["alert_datetime"])
-        print(now, alert_time, abs(now - alert_time), tolerance)
-
         if abs(now - alert_time) <= tolerance:
-            print("Sending alert for match:", match_id)
+            matches_to_send.append(
+                f"{f['home_team']} vs {f['away_team']} ({f['league_name']}) "
+                f"alle {alert_time.strftime('%H:%M')} [id={match_id}]"
+            )
             message = (
                 f"🔥 *ALERT OVER 2.5*\n\n"
                 f"*{f['home_team']}* vs *{f['away_team']}*\n"
@@ -115,6 +117,11 @@ def check_and_send_alerts():
 
             send_telegram_message(message)
             sent_alerts.add(match_id)
+
+    if matches_to_send:
+        logger.info("📤 Partite da inviare (%d): %s", len(matches_to_send), "; ".join(matches_to_send))
+    else:
+        logger.info("📭 Nessuna partita da inviare in questa iterazione")
 
     save_sent_alerts(sent_alerts)
 
