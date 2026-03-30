@@ -1,7 +1,407 @@
 {
   "generated_at": "2026-03-30 17:19:28.162894",
-  "n": 246,
+  "n": 266,
   "alerts": [
+    {
+      "match_id": "fake-040",
+      "home_team": "Sao Paulo",
+      "away_team": "Corinthians",
+      "match_date": "2026-03-30",
+      "match_time": "23:10",
+      "league_id": "Brasileirao",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.93,
+          "confidence_score": 1105.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.78,
+          "confidence_score": 965.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-039",
+      "home_team": "Tigres",
+      "away_team": "Monterrey",
+      "match_date": "2026-03-30",
+      "match_time": "23:00",
+      "league_id": "Liga MX",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.92,
+          "confidence_score": 1075.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.76,
+          "confidence_score": 940.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-038",
+      "home_team": "San Lorenzo",
+      "away_team": "Independiente",
+      "match_date": "2026-03-30",
+      "match_time": "23:00",
+      "league_id": "Primera Division",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.88,
+          "confidence_score": 975.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.71,
+          "confidence_score": 840.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-037",
+      "home_team": "Atletico MG",
+      "away_team": "Internacional",
+      "match_date": "2026-03-30",
+      "match_time": "22:45",
+      "league_id": "Brasileirao",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.9,
+          "confidence_score": 1030.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.74,
+          "confidence_score": 895.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-036",
+      "home_team": "Santos",
+      "away_team": "Gremio",
+      "match_date": "2026-03-30",
+      "match_time": "22:45",
+      "league_id": "Brasileirao",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.87,
+          "confidence_score": 955.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.69,
+          "confidence_score": 820.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-035",
+      "home_team": "Cruz Azul",
+      "away_team": "America",
+      "match_date": "2026-03-30",
+      "match_time": "22:20",
+      "league_id": "Liga MX",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.89,
+          "confidence_score": 990.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.72,
+          "confidence_score": 855.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-034",
+      "home_team": "Atletico Nacional",
+      "away_team": "Once Caldas",
+      "match_date": "2026-03-30",
+      "match_time": "22:20",
+      "league_id": "Liga BetPlay",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.91,
+          "confidence_score": 1055.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.75,
+          "confidence_score": 915.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-033",
+      "home_team": "Nantes",
+      "away_team": "Reims",
+      "match_date": "2026-03-30",
+      "match_time": "22:10",
+      "league_id": "Ligue 1",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.84,
+          "confidence_score": 910.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.65,
+          "confidence_score": 780.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-032",
+      "home_team": "Udinese",
+      "away_team": "Empoli",
+      "match_date": "2026-03-30",
+      "match_time": "22:10",
+      "league_id": "Serie A",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.86,
+          "confidence_score": 935.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.67,
+          "confidence_score": 800.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-031",
+      "home_team": "Stuttgart",
+      "away_team": "Mainz",
+      "match_date": "2026-03-30",
+      "match_time": "21:55",
+      "league_id": "Bundesliga",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.87,
+          "confidence_score": 950.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.68,
+          "confidence_score": 815.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-030",
+      "home_team": "West Ham",
+      "away_team": "Wolves",
+      "match_date": "2026-03-30",
+      "match_time": "21:55",
+      "league_id": "Premier League",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.88,
+          "confidence_score": 970.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.7,
+          "confidence_score": 835.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-029",
+      "home_team": "Celta Vigo",
+      "away_team": "Osasuna",
+      "match_date": "2026-03-30",
+      "match_time": "21:40",
+      "league_id": "La Liga",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.84,
+          "confidence_score": 915.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.65,
+          "confidence_score": 785.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-028",
+      "home_team": "Torino",
+      "away_team": "Bologna",
+      "match_date": "2026-03-30",
+      "match_time": "21:40",
+      "league_id": "Serie A",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.89,
+          "confidence_score": 985.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.71,
+          "confidence_score": 850.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-027",
+      "home_team": "Genk",
+      "away_team": "Anderlecht",
+      "match_date": "2026-03-30",
+      "match_time": "21:25",
+      "league_id": "Pro League",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.85,
+          "confidence_score": 925.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.66,
+          "confidence_score": 795.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-026",
+      "home_team": "Newcastle",
+      "away_team": "Aston Villa",
+      "match_date": "2026-03-30",
+      "match_time": "21:25",
+      "league_id": "Premier League",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.9,
+          "confidence_score": 1025.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.73,
+          "confidence_score": 890.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-025",
+      "home_team": "Leipzig",
+      "away_team": "Hoffenheim",
+      "match_date": "2026-03-30",
+      "match_time": "21:10",
+      "league_id": "Bundesliga",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.86,
+          "confidence_score": 940.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.67,
+          "confidence_score": 805.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-024",
+      "home_team": "Sevilla",
+      "away_team": "Real Betis",
+      "match_date": "2026-03-30",
+      "match_time": "21:10",
+      "league_id": "La Liga",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.88,
+          "confidence_score": 975.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.7,
+          "confidence_score": 840.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-023",
+      "home_team": "Lazio",
+      "away_team": "Juventus",
+      "match_date": "2026-03-30",
+      "match_time": "21:10",
+      "league_id": "Serie A",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.93,
+          "confidence_score": 1095.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.77,
+          "confidence_score": 960.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-022",
+      "home_team": "Lille",
+      "away_team": "Rennes",
+      "match_date": "2026-03-30",
+      "match_time": "20:40",
+      "league_id": "Ligue 1",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.87,
+          "confidence_score": 955.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.69,
+          "confidence_score": 820.0
+        }
+      ]
+    },
+    {
+      "match_id": "fake-021",
+      "home_team": "Sporting CP",
+      "away_team": "Braga",
+      "match_date": "2026-03-30",
+      "match_time": "20:40",
+      "league_id": "Primeira Liga",
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.91,
+          "confidence_score": 1045.0
+        },
+        {
+          "market": "over_25",
+          "prob_cal": 0.74,
+          "confidence_score": 905.0
+        }
+      ]
+    },
     {
       "match_id": "fake-020",
       "home_team": "Boca Juniors",
