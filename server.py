@@ -23,7 +23,7 @@ FIXTURES_FILE = Path("./score_over_05_alerts.json")
 SENT_ALERTS_FILE = Path("./sent_alerts.json")
 
 CHECK_EVERY_SECONDS = 300      # 5 minuti
-TIME_TOLERANCE_MINUTES = 2     # ±2 minuti
+TIME_TOLERANCE_MINUTES = 3     # ±3 minuti (cron ogni 5min, serve margine)
 
 TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 
@@ -180,6 +180,10 @@ async def health_check():
 @app.get("/health")
 async def health_check_get():
     return {"status": "ok"}
+
+@app.head("/")
+async def root_head():
+    return Response(status_code=200)
 
 @app.get("/")
 async def root():
