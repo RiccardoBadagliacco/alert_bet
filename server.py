@@ -128,23 +128,20 @@ def check_and_send_alerts():
         for ko_time, fixtures_group in sorted(groups.items()):
             n = len(fixtures_group)
             header = (
-                f"🟢 *OVER 0.5 — 2° Tempo* — ⏱ {ko_time}\n"
+                f"⏱ *INTERVALLO — Controlla il punteggio!*\n"
                 f"{'─' * 28}\n"
             )
             match_blocks = []
             for f in fixtures_group:
                 league = f.get("league_name") or f.get("league_id", "")
-                over15 = next((a for a in f.get("alerts", []) if a["market"] == "over_15"), None)
                 over25 = next((a for a in f.get("alerts", []) if a["market"] == "over_25"), None)
-                prob15 = f"🎯 O1.5  `{over15['prob_cal']*100:.0f}%`" if over15 else ""
-                prob25 = f"🎯 O2.5  `{over25['prob_cal']*100:.0f}%`" if over25 else ""
-                probs = "   ".join(p for p in [prob15, prob25] if p)
+                prob25 = f"`{over25['prob_cal']*100:.0f}%`" if over25 else ""
                 match_blocks.append(
                     f"⚽ *{f['home_team']}* vs *{f['away_team']}*\n"
                     f"🏆 _{league}_\n"
-                    f"{probs}"
+                    f"👉 Se è *0-0* → entra su *Over 0.5 2T*   🎯 {prob25}"
                 )
-            footer = f"\n{'─' * 28}\n📊 _{n} {'partita' if n == 1 else 'partite'} in questa finestra_"
+            footer = f"\n{'─' * 28}\n_Kick-off {ko_time} · modello Over 2.5 Aggressivo_"
             message = header + "\n\n".join(match_blocks) + footer
             send_telegram_message(message)
             logger.info("📤 Inviato blocco %s (%d partite)", ko_time, len(fixtures_group))
