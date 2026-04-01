@@ -27,7 +27,9 @@ TIME_TOLERANCE_MINUTES = 3     # ±3 minuti
 
 TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 
-HALFTIME_OFFSET_MINUTES = 50   # kickoff + 50min → alert 2° tempo
+# Timing alert
+HT_OFFSET_MINUTES = 15     # kickoff +15min → alert Over 0.5 HT (segnale A)
+HALFTIME_OFFSET_MINUTES = 50   # kickoff +50min → alert Over 0.5 2T (segnali A+B)
 
 # ==========================
 # LOGGING
@@ -79,15 +81,27 @@ def send_telegram_message(text: str):
 
 # ==========================
 # STATE
-# sent_alerts = { match_id: {"kickoff": bool, "halftime": bool} }
+# sent_alerts = {
+#   match_id: {
+#     "ht_sent": bool,    # alert +15min Over 0.5 HT
+#     "2t_sent": bool,    # alert +50min Over 0.5 2T
+#   }
+# }
 # ==========================
 def load_sent_alerts() -> dict:
     if SENT_ALERTS_FILE.exists():
         raw = json.loads(SENT_ALERTS_FILE.read_text())
-        # Migrazione da vecchio formato (set/list di match_id)
+        # Migrazione da vecchi formati
         if isinstance(raw, list):
-            return {mid: {"kickoff": True, "halftime": True} for mid in raw}
-        return raw
+            return {mid: {"ht_sent": True, "2t_sent": True} for mid in raw}
+        # Migrazione da formato {kickoff, halftime}
+        migrated = {}
+        for mid, v in raw.items():
+            if isinstance(v, dict) and "ht_sent" in v:
+                migrated[mid] = v
+            else:
+                migrated[mid] = {"ht_sent": v.get("kickoff", True), "2t_sent": v.get("halftime", True)}
+        return migrated
     return {}
 
 def save_sent_alerts(sent: dict):
@@ -105,12 +119,13 @@ def check_and_send_alerts():
     fixtures = data.get("alerts", data) if isinstance(data, dict) else data
     logger.info("🔍 Controllo alert per %d fixtures", len(fixtures))
 
-    kickoff_to_send = []   # (kickoff_dt, fixture)
-    halftime_to_send = []  # (kickoff_dt, fixture)
+    ht_to_send = []   # (kickoff_dt, fixture)  — Over 0.5 HT, +15min
+    t2_to_send = []   # (kickoff_dt, fixture)  — Over 0.5 2T, +50min
 
     for f in fixtures:
         match_id = f["match_id"]
-        state = sent_alerts.get(match_id, {"kickoff": False, "halftime": False})
+        signal_type = f.get("signal_type", "ht_and_2t")  # default retrocompatibile
+        state = sent_alerts.get(match_id, {"ht_sent": False, "2t_sent": False})
 
         match_date = f.get("match_date", "")
         match_time = f.get("match_time", "") or "00:00"
@@ -119,70 +134,78 @@ def check_and_send_alerts():
             continue
         kickoff = parser.isoparse(alert_dt_str)
 
-        # Alert 1 — kickoff
-        if not state["kickoff"] and abs(now - kickoff) <= tolerance:
-            kickoff_to_send.append((kickoff, f))
-            state["kickoff"] = True
+        # Alert Over 0.5 HT — solo segnale A (ht_and_2t), +15min
+        if signal_type == "ht_and_2t" and not state["ht_sent"]:
+            ht_time = kickoff + timedelta(minutes=HT_OFFSET_MINUTES)
+            if abs(now - ht_time) <= tolerance:
+                ht_to_send.append((kickoff, f))
+                state["ht_sent"] = True
 
-        # Alert 2 — inizio 2° tempo
-        halftime_time = kickoff + timedelta(minutes=HALFTIME_OFFSET_MINUTES)
-        if not state["halftime"] and abs(now - halftime_time) <= tolerance:
-            halftime_to_send.append((kickoff, f))
-            state["halftime"] = True
+        # Alert Over 0.5 2T — tutti i segnali, +50min
+        if not state["2t_sent"]:
+            t2_time = kickoff + timedelta(minutes=HALFTIME_OFFSET_MINUTES)
+            if abs(now - t2_time) <= tolerance:
+                t2_to_send.append((kickoff, f))
+                state["2t_sent"] = True
 
         sent_alerts[match_id] = state
 
-    # ── Invia alert kickoff ──
-    if kickoff_to_send:
+    # ── Invia alert Over 0.5 HT (+15min) ──
+    if ht_to_send:
         from collections import defaultdict
         groups: dict = defaultdict(list)
-        for kickoff, f in kickoff_to_send:
+        for kickoff, f in ht_to_send:
             groups[kickoff.strftime("%H:%M")].append(f)
 
-        for ko_time, fixtures_group in sorted(groups.items()):
-            header = f"🟢 *PARTITA INIZIATA*\n{'─' * 28}\n"
-            match_blocks = []
-            for f in fixtures_group:
+        for ko_time, group in sorted(groups.items()):
+            header = f"⚽ *PARTITA IN CORSO — Over 0.5 1° Tempo*\n{'─' * 30}\n"
+            blocks = []
+            for f in group:
                 league = f.get("league_name") or f.get("league_id", "")
-                over25 = next((a for a in f.get("alerts", []) if a["market"] == "over_25"), None)
-                cs = f"`cs {over25['confidence_score']:.0f}`" if over25 else ""
-                prob = f"`{over25['prob_cal']*100:.0f}%`" if over25 else ""
-                match_blocks.append(
-                    f"⚽ *{f['home_team']}* vs *{f['away_team']}*\n"
+                a = next((x for x in f.get("alerts", []) if x["market"] == "over_25"), None)
+                cs = f"`cs {a['confidence_score']:.0f}`" if a else ""
+                prob = f"`{a['prob_cal']*100:.0f}%`" if a else ""
+                blocks.append(
+                    f"🏟 *{f['home_team']}* vs *{f['away_team']}*\n"
                     f"🏆 _{league}_\n"
                     f"📊 Over 2.5 {prob} · {cs}\n"
-                    f"👁 Tienila d'occhio — alert 2° tempo tra ~50min"
+                    f"👉 Controlla il punteggio → se ancora *0-0* entra su *Over 0.5 1T*"
                 )
-            footer = f"\n{'─' * 28}\n_Kick-off {ko_time} · modello Over 2.5 Ultra Aggressivo_"
-            message = header + "\n\n".join(match_blocks) + footer
-            send_telegram_message(message)
-            logger.info("📤 [KICKOFF] Inviato blocco %s (%d partite)", ko_time, len(fixtures_group))
+            footer = f"\n{'─' * 30}\n_Kick-off {ko_time} · +15min · modello Over 2.5 Ultra Aggressivo_"
+            send_telegram_message(header + "\n\n".join(blocks) + footer)
+            logger.info("📤 [HT +15min] Inviato blocco %s (%d partite)", ko_time, len(group))
 
-    # ── Invia alert 2° tempo ──
-    if halftime_to_send:
+    # ── Invia alert Over 0.5 2T (+50min) ──
+    if t2_to_send:
         from collections import defaultdict
         groups2: dict = defaultdict(list)
-        for kickoff, f in halftime_to_send:
+        for kickoff, f in t2_to_send:
             groups2[kickoff.strftime("%H:%M")].append(f)
 
-        for ko_time, fixtures_group in sorted(groups2.items()):
-            header = f"⏱ *SECONDO TEMPO — Controlla il punteggio!*\n{'─' * 28}\n"
-            match_blocks = []
-            for f in fixtures_group:
+        for ko_time, group in sorted(groups2.items()):
+            header = f"⏱ *SECONDO TEMPO — Over 0.5 2° Tempo*\n{'─' * 30}\n"
+            blocks = []
+            for f in group:
                 league = f.get("league_name") or f.get("league_id", "")
-                over25 = next((a for a in f.get("alerts", []) if a["market"] == "over_25"), None)
-                prob25 = f"`{over25['prob_cal']*100:.0f}%`" if over25 else ""
-                match_blocks.append(
-                    f"⚽ *{f['home_team']}* vs *{f['away_team']}*\n"
+                signal_type = f.get("signal_type", "ht_and_2t")
+                a25 = next((x for x in f.get("alerts", []) if x["market"] == "over_25"), None)
+                a15 = next((x for x in f.get("alerts", []) if x["market"] == "over_15"), None)
+                if signal_type == "ht_and_2t" and a25:
+                    sig_line = f"📊 Over 2.5 `{a25['prob_cal']*100:.0f}%` · `cs {a25['confidence_score']:.0f}`"
+                else:
+                    cs_val = a15['confidence_score'] if a15 else 0
+                    sig_line = f"📊 Over 1.5 `cs {cs_val:.0f}` · quota bassa ✓"
+                blocks.append(
+                    f"🏟 *{f['home_team']}* vs *{f['away_team']}*\n"
                     f"🏆 _{league}_\n"
-                    f"👉 Se è *0-0* → entra su *Over 0.5 2T*   🎯 {prob25}"
+                    f"{sig_line}\n"
+                    f"👉 Se è *0-0* → entra su *Over 0.5 2T*"
                 )
-            footer = f"\n{'─' * 28}\n_Kick-off {ko_time} · modello Over 2.5 Ultra Aggressivo_"
-            message = header + "\n\n".join(match_blocks) + footer
-            send_telegram_message(message)
-            logger.info("📤 [HALFTIME] Inviato blocco %s (%d partite)", ko_time, len(fixtures_group))
+            footer = f"\n{'─' * 30}\n_Kick-off {ko_time} · +50min · modello Profeta v2_"
+            send_telegram_message(header + "\n\n".join(blocks) + footer)
+            logger.info("📤 [2T +50min] Inviato blocco %s (%d partite)", ko_time, len(group))
 
-    if not kickoff_to_send and not halftime_to_send:
+    if not ht_to_send and not t2_to_send:
         logger.info("📭 Nessuna partita da inviare in questa iterazione")
 
     save_sent_alerts(sent_alerts)
