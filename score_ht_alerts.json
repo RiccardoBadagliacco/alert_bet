@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01 12:52:35.183122",
+  "generated_at": "2026-04-01 14:31:26.351317",
   "n": 12,
   "alerts": [
     {
@@ -13,7 +13,7 @@
         {
           "market": "over_25",
           "prob_cal": 0.7043,
-          "confidence_score": 926.8
+          "confidence_score": 926.2
         }
       ]
     },
@@ -28,7 +28,7 @@
         {
           "market": "over_25",
           "prob_cal": 0.7043,
-          "confidence_score": 861.7
+          "confidence_score": 856.6
         }
       ]
     },
@@ -43,7 +43,7 @@
         {
           "market": "over_25",
           "prob_cal": 0.7043,
-          "confidence_score": 848.3
+          "confidence_score": 847.9
         }
       ]
     },
@@ -58,7 +58,7 @@
         {
           "market": "over_25",
           "prob_cal": 0.683,
-          "confidence_score": 843.1
+          "confidence_score": 842.7
         }
       ]
     },
@@ -73,7 +73,7 @@
         {
           "market": "over_25",
           "prob_cal": 0.7043,
-          "confidence_score": 841.7
+          "confidence_score": 841.8
         }
       ]
     },
@@ -108,21 +108,6 @@
       ]
     },
     {
-      "match_id": "75ab4a3a-0338-4ead-82a9-e80e932aaf39",
-      "home_team": "KTP",
-      "away_team": "KaPa",
-      "match_date": "2024-05-27",
-      "match_time": "00:00",
-      "league_id": "f4e83cca-3e7e-4a30-af71-a999aa9070c9",
-      "alerts": [
-        {
-          "market": "over_25",
-          "prob_cal": 0.683,
-          "confidence_score": 791.9
-        }
-      ]
-    },
-    {
       "match_id": "9fe54df6-f3d3-4ee9-bdd3-c7802f2ddf0c",
       "home_team": "ADO Den Haag",
       "away_team": "Ajax II",
@@ -138,6 +123,21 @@
       ]
     },
     {
+      "match_id": "75ab4a3a-0338-4ead-82a9-e80e932aaf39",
+      "home_team": "KTP",
+      "away_team": "KaPa",
+      "match_date": "2024-05-27",
+      "match_time": "00:00",
+      "league_id": "f4e83cca-3e7e-4a30-af71-a999aa9070c9",
+      "alerts": [
+        {
+          "market": "over_25",
+          "prob_cal": 0.683,
+          "confidence_score": 786.2
+        }
+      ]
+    },
+    {
       "match_id": "6c36dc18-0913-4389-a994-ce5956ef854b",
       "home_team": "TPS",
       "away_team": "KaPa",
@@ -148,7 +148,7 @@
         {
           "market": "over_25",
           "prob_cal": 0.683,
-          "confidence_score": 783.3
+          "confidence_score": 782.7
         }
       ]
     },
@@ -163,7 +163,7 @@
         {
           "market": "over_25",
           "prob_cal": 0.7043,
-          "confidence_score": 782.2
+          "confidence_score": 781.9
         }
       ]
     },
