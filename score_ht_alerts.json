@@ -1,1 +1,186 @@
-{"generated_at":null,"n":0,"alerts":[]}
+{
+  "generated_at": "2026-04-01 12:52:35.183122",
+  "n": 12,
+  "alerts": [
+    {
+      "match_id": "73fb23e6-54cd-4769-860e-ffc4a3e749d9",
+      "home_team": "Red Star Belgrade",
+      "away_team": "Zeleznicar Pancevo",
+      "match_date": "2025-09-13",
+      "match_time": "00:00",
+      "league_id": "80f33909-6561-4a5e-97c4-f96f4406b8cd",
+      "alerts": [
+        {
+          "market": "over_25",
+          "prob_cal": 0.7043,
+          "confidence_score": 926.8
+        }
+      ]
+    },
+    {
+      "match_id": "ba8277f3-7b64-478e-a851-05dbd55641bf",
+      "home_team": "Noah",
+      "away_team": "BKMA",
+      "match_date": "2025-08-10",
+      "match_time": "00:00",
+      "league_id": "e5f2dcca-d0a4-44ab-ac38-55363f817769",
+      "alerts": [
+        {
+          "market": "over_25",
+          "prob_cal": 0.7043,
+          "confidence_score": 861.7
+        }
+      ]
+    },
+    {
+      "match_id": "ee5d148e-fe9e-455a-b9fe-c0552e476017",
+      "home_team": "Qarabag",
+      "away_team": "Kapaz",
+      "match_date": "2026-01-23",
+      "match_time": "00:00",
+      "league_id": "de44b010-fca2-4988-be89-a15564028f5e",
+      "alerts": [
+        {
+          "market": "over_25",
+          "prob_cal": 0.7043,
+          "confidence_score": 848.3
+        }
+      ]
+    },
+    {
+      "match_id": "6cb04de4-afd5-489f-b2f4-e5a493a9ce43",
+      "home_team": "Celje",
+      "away_team": "Domzale",
+      "match_date": "2026-03-07",
+      "match_time": "00:00",
+      "league_id": "8ed17259-6318-43e7-ab30-d3002251cf86",
+      "alerts": [
+        {
+          "market": "over_25",
+          "prob_cal": 0.683,
+          "confidence_score": 843.1
+        }
+      ]
+    },
+    {
+      "match_id": "61b2332c-c454-4082-a007-ec0ef1c36762",
+      "home_team": "Jaro",
+      "away_team": "KaPa",
+      "match_date": "2024-04-24",
+      "match_time": "00:00",
+      "league_id": "f4e83cca-3e7e-4a30-af71-a999aa9070c9",
+      "alerts": [
+        {
+          "market": "over_25",
+          "prob_cal": 0.7043,
+          "confidence_score": 841.7
+        }
+      ]
+    },
+    {
+      "match_id": "1d6f437b-a346-477f-a329-d444f8e9dde1",
+      "home_team": "Tanjong Pagar",
+      "away_team": "Lion City Sailors",
+      "match_date": "2026-04-06",
+      "match_time": "00:00",
+      "league_id": "57d47f5e-8e28-4f44-a575-3e9dba434986",
+      "alerts": [
+        {
+          "market": "over_25",
+          "prob_cal": 0.7043,
+          "confidence_score": 833.7
+        }
+      ]
+    },
+    {
+      "match_id": "9afc56b2-71ca-4bb6-adf5-eda903cb0660",
+      "home_team": "SK Poltava",
+      "away_team": "Dinamo Kiev",
+      "match_date": "2026-05-23",
+      "match_time": "00:00",
+      "league_id": "de0c5683-9c3f-4160-bfce-89732abe7c2f",
+      "alerts": [
+        {
+          "market": "over_25",
+          "prob_cal": 0.7043,
+          "confidence_score": 829.8
+        }
+      ]
+    },
+    {
+      "match_id": "75ab4a3a-0338-4ead-82a9-e80e932aaf39",
+      "home_team": "KTP",
+      "away_team": "KaPa",
+      "match_date": "2024-05-27",
+      "match_time": "00:00",
+      "league_id": "f4e83cca-3e7e-4a30-af71-a999aa9070c9",
+      "alerts": [
+        {
+          "market": "over_25",
+          "prob_cal": 0.683,
+          "confidence_score": 791.9
+        }
+      ]
+    },
+    {
+      "match_id": "9fe54df6-f3d3-4ee9-bdd3-c7802f2ddf0c",
+      "home_team": "ADO Den Haag",
+      "away_team": "Ajax II",
+      "match_date": "2026-04-03",
+      "match_time": "00:00",
+      "league_id": "34b551b1-2d73-47aa-9772-c949a139f413",
+      "alerts": [
+        {
+          "market": "over_25",
+          "prob_cal": 0.683,
+          "confidence_score": 789.2
+        }
+      ]
+    },
+    {
+      "match_id": "6c36dc18-0913-4389-a994-ce5956ef854b",
+      "home_team": "TPS",
+      "away_team": "KaPa",
+      "match_date": "2024-05-04",
+      "match_time": "00:00",
+      "league_id": "f4e83cca-3e7e-4a30-af71-a999aa9070c9",
+      "alerts": [
+        {
+          "market": "over_25",
+          "prob_cal": 0.683,
+          "confidence_score": 783.3
+        }
+      ]
+    },
+    {
+      "match_id": "be3dfa66-a23d-4a00-b017-8d25d89928d3",
+      "home_team": "Celje",
+      "away_team": "Koper",
+      "match_date": "2026-05-16",
+      "match_time": "00:00",
+      "league_id": "8ed17259-6318-43e7-ab30-d3002251cf86",
+      "alerts": [
+        {
+          "market": "over_25",
+          "prob_cal": 0.7043,
+          "confidence_score": 782.2
+        }
+      ]
+    },
+    {
+      "match_id": "5b88980e-e511-40c8-a901-2cb4ebceaf14",
+      "home_team": "Jaro",
+      "away_team": "MP",
+      "match_date": "2024-07-24",
+      "match_time": "00:00",
+      "league_id": "f4e83cca-3e7e-4a30-af71-a999aa9070c9",
+      "alerts": [
+        {
+          "market": "over_25",
+          "prob_cal": 0.683,
+          "confidence_score": 760.4
+        }
+      ]
+    }
+  ]
+}
