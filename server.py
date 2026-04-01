@@ -23,9 +23,11 @@ FIXTURES_FILE = Path("./score_over_05_alerts.json")
 SENT_ALERTS_FILE = Path("./sent_alerts.json")
 
 CHECK_EVERY_SECONDS = 300      # 5 minuti
-TIME_TOLERANCE_MINUTES = 3     # ±3 minuti (cron ogni 5min, serve margine)
+TIME_TOLERANCE_MINUTES = 3     # ±3 minuti
 
 TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+
+HALFTIME_OFFSET_MINUTES = 50   # kickoff + 50min → alert 2° tempo
 
 # ==========================
 # LOGGING
@@ -77,20 +79,23 @@ def send_telegram_message(text: str):
 
 # ==========================
 # STATE
+# sent_alerts = { match_id: {"kickoff": bool, "halftime": bool} }
 # ==========================
-def load_sent_alerts():
+def load_sent_alerts() -> dict:
     if SENT_ALERTS_FILE.exists():
-        return set(json.loads(SENT_ALERTS_FILE.read_text()))
-    return set()
+        raw = json.loads(SENT_ALERTS_FILE.read_text())
+        # Migrazione da vecchio formato (set/list di match_id)
+        if isinstance(raw, list):
+            return {mid: {"kickoff": True, "halftime": True} for mid in raw}
+        return raw
+    return {}
 
-def save_sent_alerts(sent_ids):
-    SENT_ALERTS_FILE.write_text(json.dumps(list(sent_ids), indent=2))
+def save_sent_alerts(sent: dict):
+    SENT_ALERTS_FILE.write_text(json.dumps(sent, indent=2))
 
 # ==========================
 # CORE LOGIC
 # ==========================
-HALFTIME_OFFSET_MINUTES = 50   # alert al ~2° tempo (kick-off + 50 min)
-
 def check_and_send_alerts():
     now = datetime.now()
     tolerance = timedelta(minutes=TIME_TOLERANCE_MINUTES)
@@ -100,11 +105,12 @@ def check_and_send_alerts():
     fixtures = data.get("alerts", data) if isinstance(data, dict) else data
     logger.info("🔍 Controllo alert per %d fixtures", len(fixtures))
 
-    to_send = []  # lista di (alert_time, fixture) da inviare in questo ciclo
+    kickoff_to_send = []   # (kickoff_dt, fixture)
+    halftime_to_send = []  # (kickoff_dt, fixture)
+
     for f in fixtures:
         match_id = f["match_id"]
-        if match_id in sent_alerts:
-            continue
+        state = sent_alerts.get(match_id, {"kickoff": False, "halftime": False})
 
         match_date = f.get("match_date", "")
         match_time = f.get("match_time", "") or "00:00"
@@ -112,25 +118,55 @@ def check_and_send_alerts():
         if not alert_dt_str:
             continue
         kickoff = parser.isoparse(alert_dt_str)
-        alert_time = kickoff + timedelta(minutes=HALFTIME_OFFSET_MINUTES)
 
-        if abs(now - alert_time) <= tolerance:
-            to_send.append((kickoff, f))
-            sent_alerts.add(match_id)
+        # Alert 1 — kickoff
+        if not state["kickoff"] and abs(now - kickoff) <= tolerance:
+            kickoff_to_send.append((kickoff, f))
+            state["kickoff"] = True
 
-    if to_send:
-        # Raggruppa per orario di kick-off (stessa ora → stesso messaggio)
+        # Alert 2 — inizio 2° tempo
+        halftime_time = kickoff + timedelta(minutes=HALFTIME_OFFSET_MINUTES)
+        if not state["halftime"] and abs(now - halftime_time) <= tolerance:
+            halftime_to_send.append((kickoff, f))
+            state["halftime"] = True
+
+        sent_alerts[match_id] = state
+
+    # ── Invia alert kickoff ──
+    if kickoff_to_send:
         from collections import defaultdict
         groups: dict = defaultdict(list)
-        for kickoff, f in to_send:
+        for kickoff, f in kickoff_to_send:
             groups[kickoff.strftime("%H:%M")].append(f)
 
         for ko_time, fixtures_group in sorted(groups.items()):
-            n = len(fixtures_group)
-            header = (
-                f"⏱ *INTERVALLO — Controlla il punteggio!*\n"
-                f"{'─' * 28}\n"
-            )
+            header = f"🟢 *PARTITA INIZIATA*\n{'─' * 28}\n"
+            match_blocks = []
+            for f in fixtures_group:
+                league = f.get("league_name") or f.get("league_id", "")
+                over25 = next((a for a in f.get("alerts", []) if a["market"] == "over_25"), None)
+                cs = f"`cs {over25['confidence_score']:.0f}`" if over25 else ""
+                prob = f"`{over25['prob_cal']*100:.0f}%`" if over25 else ""
+                match_blocks.append(
+                    f"⚽ *{f['home_team']}* vs *{f['away_team']}*\n"
+                    f"🏆 _{league}_\n"
+                    f"📊 Over 2.5 {prob} · {cs}\n"
+                    f"👁 Tienila d'occhio — alert 2° tempo tra ~50min"
+                )
+            footer = f"\n{'─' * 28}\n_Kick-off {ko_time} · modello Over 2.5 Ultra Aggressivo_"
+            message = header + "\n\n".join(match_blocks) + footer
+            send_telegram_message(message)
+            logger.info("📤 [KICKOFF] Inviato blocco %s (%d partite)", ko_time, len(fixtures_group))
+
+    # ── Invia alert 2° tempo ──
+    if halftime_to_send:
+        from collections import defaultdict
+        groups2: dict = defaultdict(list)
+        for kickoff, f in halftime_to_send:
+            groups2[kickoff.strftime("%H:%M")].append(f)
+
+        for ko_time, fixtures_group in sorted(groups2.items()):
+            header = f"⏱ *SECONDO TEMPO — Controlla il punteggio!*\n{'─' * 28}\n"
             match_blocks = []
             for f in fixtures_group:
                 league = f.get("league_name") or f.get("league_id", "")
@@ -141,11 +177,12 @@ def check_and_send_alerts():
                     f"🏆 _{league}_\n"
                     f"👉 Se è *0-0* → entra su *Over 0.5 2T*   🎯 {prob25}"
                 )
-            footer = f"\n{'─' * 28}\n_Kick-off {ko_time} · modello Over 2.5 Aggressivo_"
+            footer = f"\n{'─' * 28}\n_Kick-off {ko_time} · modello Over 2.5 Ultra Aggressivo_"
             message = header + "\n\n".join(match_blocks) + footer
             send_telegram_message(message)
-            logger.info("📤 Inviato blocco %s (%d partite)", ko_time, len(fixtures_group))
-    else:
+            logger.info("📤 [HALFTIME] Inviato blocco %s (%d partite)", ko_time, len(fixtures_group))
+
+    if not kickoff_to_send and not halftime_to_send:
         logger.info("📭 Nessuna partita da inviare in questa iterazione")
 
     save_sent_alerts(sent_alerts)
