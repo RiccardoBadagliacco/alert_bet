@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-01 16:27:00.000491",
+  "generated_at": "2026-04-02 11:01:47.373266",
   "n": 11,
   "alerts": [
     {
-      "match_id": "b5634015-279f-434a-afee-303962f3b560",
+      "match_id": "853f71b9-94b1-4b35-ab42-a356f4637c3e",
       "home_team": "Qarabag",
       "away_team": "Kapaz",
       "match_date": "2026-03-20",
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "match_id": "73fb23e6-54cd-4769-860e-ffc4a3e749d9",
+      "match_id": "50b06191-53e3-4b77-8dae-d4ae964ed2c0",
       "home_team": "Red Star Belgrade",
       "away_team": "Zeleznicar Pancevo",
       "match_date": "2025-09-13",
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "match_id": "ba8277f3-7b64-478e-a851-05dbd55641bf",
+      "match_id": "beef338a-692b-4b1e-9ae7-475a1cf43e89",
       "home_team": "Noah",
       "away_team": "BKMA",
       "match_date": "2025-08-10",
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "match_id": "9afc56b2-71ca-4bb6-adf5-eda903cb0660",
+      "match_id": "292561ff-702f-43c8-afad-0f1b444e7949",
       "home_team": "SK Poltava",
       "away_team": "Dinamo Kiev",
       "match_date": "2026-05-23",
@@ -63,7 +63,7 @@
       ]
     },
     {
-      "match_id": "be3dfa66-a23d-4a00-b017-8d25d89928d3",
+      "match_id": "91a62e38-4d10-4397-862a-78e434ee0c1e",
       "home_team": "Celje",
       "away_team": "Koper",
       "match_date": "2026-05-16",
@@ -78,7 +78,7 @@
       ]
     },
     {
-      "match_id": "1d6f437b-a346-477f-a329-d444f8e9dde1",
+      "match_id": "ee91102a-460a-465a-9ca2-fa453092444d",
       "home_team": "Tanjong Pagar",
       "away_team": "Lion City Sailors",
       "match_date": "2026-04-06",
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "match_id": "6f6a666a-d6b3-4445-a36b-da53a603d3b0",
+      "match_id": "77d4bb25-9ffa-4519-83a5-53381ddeb790",
       "home_team": "SK Poltava",
       "away_team": "Polissya",
       "match_date": "2026-04-11",
@@ -138,7 +138,7 @@
       ]
     },
     {
-      "match_id": "9fe54df6-f3d3-4ee9-bdd3-c7802f2ddf0c",
+      "match_id": "7d455c18-838d-44b9-88ab-c7dfbda7033d",
       "home_team": "ADO Den Haag",
       "away_team": "Ajax II",
       "match_date": "2026-04-03",
@@ -153,7 +153,7 @@
       ]
     },
     {
-      "match_id": "4c584425-8158-4e40-8446-16336be0dc47",
+      "match_id": "24d60811-2c27-4fa9-b2e0-13c1f0c1eea8",
       "home_team": "SK Poltava",
       "away_team": "Shakhtar Donetsk",
       "match_date": "2026-05-09",
