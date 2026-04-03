@@ -28,8 +28,8 @@ TIME_TOLERANCE_MINUTES = 3     # ±3 minuti
 
 TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 
-# Alert inviato 30 minuti PRIMA del kick-off come reminder da monitorare
-PRE_MATCH_OFFSET_MINUTES = -30   # kickoff - 30min → "tienila d'occhio"
+# Alert inviato al kick-off (0 min) come reminder da monitorare durante il 1° tempo
+PRE_MATCH_OFFSET_MINUTES = 0   # esattamente al kick-off
 
 # ==========================
 # LOGGING
@@ -100,19 +100,24 @@ def _load_fixtures(path: Path) -> list:
     data = json.loads(path.read_text())
     return data.get("alerts", data) if isinstance(data, dict) else data
 
-def _kickoff(f) -> datetime | None:
+def _kickoff(f) -> tuple[datetime | None, bool]:
+    """Ritorna (datetime, orario_noto). Se orario ignoto usa le 08:00 del giorno della partita."""
     match_date = f.get("match_date", "")
     match_time = f.get("match_time", "") or ""
     if not match_date:
-        return None
+        return None, False
     if not match_time or match_time == "00:00":
-        # orario sconosciuto — salta, non mandare alert a orari sbagliati
-        return None
+        # Orario sconosciuto: schedula alert alle 08:00 del giorno della partita
+        try:
+            dt = parser.isoparse(f"{match_date}T08:00:00")
+            return dt, False
+        except Exception:
+            return None, False
     dt_str = f"{match_date}T{match_time}:00"
     try:
-        return parser.isoparse(dt_str)
+        return parser.isoparse(dt_str), True
     except Exception:
-        return None
+        return None, False
 
 # ==========================
 # CORE LOGIC
@@ -132,39 +137,40 @@ def check_and_send_alerts():
         state = sent_alerts.setdefault(mid, {"sent": False})
         if state["sent"]:
             continue
-        ko = _kickoff(f)
+        ko, time_known = _kickoff(f)
         if ko is None:
-            logger.warning("⚠️ Orario sconosciuto per %s vs %s — alert saltato",
-                           f.get("home_team", "?"), f.get("away_team", "?"))
             continue
-        alert_time = ko + timedelta(minutes=PRE_MATCH_OFFSET_MINUTES)
+        # Per partite con orario noto: alert 30min prima del kick-off
+        # Per partite senza orario: alert alle 08:00 del giorno (offset = 0)
+        offset = timedelta(minutes=PRE_MATCH_OFFSET_MINUTES) if time_known else timedelta(0)
+        alert_time = ko + offset
         if abs(now - alert_time) <= tolerance:
-            to_send.append((ko, f))
+            to_send.append((ko, f, time_known))
             state["sent"] = True
 
     if to_send:
         from collections import defaultdict
         groups: dict = defaultdict(list)
-        for ko, f in to_send:
-            groups[ko.strftime("%H:%M")].append(f)
+        for ko, f, time_known in to_send:
+            groups[(ko.strftime("%H:%M"), time_known)].append(f)
 
-        for ko_time, group in sorted(groups.items()):
+        for (ko_time, time_known), group in sorted(groups.items()):
             header = f"👀 *DA MONITORARE — Over 0.5 2T*\n{'─' * 30}\n"
             blocks = []
             for f in group:
+                time_note = f"`{ko_time}`" if time_known else "_orario n.d._"
                 league = f.get("league_name") or f.get("league_id", "")
-                a = next((x for x in f.get("alerts", []) if x["market"] == "over_25"), None)
-                cs = f"`cs {a['confidence_score']:.0f}`" if a else ""
-                prob = f"`Over 2.5 {a['prob_cal']*100:.0f}%`" if a else ""
+                country = f.get("country", "")
+                meta = f"{country} · {league}" if country else league
                 blocks.append(
                     f"🏟 *{f['home_team']}* vs *{f['away_team']}*\n"
-                    f"🏆 _{league}_\n"
-                    f"📊 {prob} · {cs}\n"
-                    f"👉 All'intervallo: se *0-0* e *SOT ≥ 10* → entra su *Over 0.5 2T*"
+                    f"📅 {f.get('match_date', '')} ⏰ {time_note}\n"
+                    f"🏆 _{meta}_"
                 )
-            footer = f"\n{'─' * 30}\n_Kick-off {ko_time} · Profeta v2 Over 2.5_"
+            ko_label = ko_time if time_known else "orario n.d."
+            footer = f"\n{'─' * 30}\n_Kick-off {ko_label} · Profeta v2 Over 2.5_"
             send_telegram_message(header + "\n\n".join(blocks) + footer)
-            logger.info("📤 [pre-match -30min] Inviato %s (%d partite)", ko_time, len(group))
+            logger.info("📤 Inviato %s (%d partite, orario_noto=%s)", ko_label, len(group), time_known)
     else:
         logger.info("📭 Nessuna partita da inviare in questa iterazione")
 
