@@ -19,9 +19,8 @@ from fastapi import FastAPI, Response
 BOT_TOKEN = os.environ["BOT_TOKEN"]           # 🔐 DA RENDER
 CHAT_ID = int(os.environ["CHAT_ID"])          # 🔐 DA RENDER
 
-# Due file separati generati da score Profeta
-HT_FILE = Path("./score_ht_alerts.json")   # Over 0.5 HT — over_25 cs>=750
-T2_FILE = Path("./score_2t_alerts.json")   # Over 0.5 2T — over_25 cs>=750 OR over_15 cs>=960 quota<=1.60
+# Un solo file: partite da monitorare per Over 0.5 2T
+T2_FILE = Path("./score_2t_alerts.json")   # over_25 cs >= 600
 SENT_ALERTS_FILE = Path("./sent_alerts.json")
 
 CHECK_EVERY_SECONDS = 300      # 5 minuti
@@ -29,8 +28,8 @@ TIME_TOLERANCE_MINUTES = 3     # ±3 minuti
 
 TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 
-HT_OFFSET_MINUTES = 15         # kickoff +15min → Over 0.5 HT
-T2_OFFSET_MINUTES = 50         # kickoff +50min → Over 0.5 2T
+# Alert inviato 30 minuti PRIMA del kick-off come reminder da monitorare
+PRE_MATCH_OFFSET_MINUTES = -30   # kickoff - 30min → "tienila d'occhio"
 
 # ==========================
 # LOGGING
@@ -76,26 +75,20 @@ def send_telegram_message(text: str):
 
 # ==========================
 # STATE
-# sent_alerts = {
-#   match_id: {"ht_sent": bool, "2t_sent": bool}
-# }
 # ==========================
 def load_sent_alerts() -> dict:
     if not SENT_ALERTS_FILE.exists():
         return {}
     raw = json.loads(SENT_ALERTS_FILE.read_text())
-    # Migrazione da formati precedenti
     if isinstance(raw, list):
-        return {mid: {"ht_sent": True, "2t_sent": True} for mid in raw}
+        return {mid: {"sent": True} for mid in raw}
     migrated = {}
     for mid, v in raw.items():
-        if isinstance(v, dict) and "ht_sent" in v:
+        if isinstance(v, dict) and "sent" in v:
             migrated[mid] = v
         else:
-            migrated[mid] = {
-                "ht_sent": v.get("kickoff", v.get("ht_sent", True)),
-                "2t_sent": v.get("halftime", v.get("2t_sent", True)),
-            }
+            # migrazione da formato vecchio ht_sent/2t_sent
+            migrated[mid] = {"sent": True}
     return migrated
 
 def save_sent_alerts(sent: dict):
@@ -107,6 +100,20 @@ def _load_fixtures(path: Path) -> list:
     data = json.loads(path.read_text())
     return data.get("alerts", data) if isinstance(data, dict) else data
 
+def _kickoff(f) -> datetime | None:
+    match_date = f.get("match_date", "")
+    match_time = f.get("match_time", "") or ""
+    if not match_date:
+        return None
+    if not match_time or match_time == "00:00":
+        # orario sconosciuto — salta, non mandare alert a orari sbagliati
+        return None
+    dt_str = f"{match_date}T{match_time}:00"
+    try:
+        return parser.isoparse(dt_str)
+    except Exception:
+        return None
+
 # ==========================
 # CORE LOGIC
 # ==========================
@@ -115,94 +122,50 @@ def check_and_send_alerts():
     tolerance = timedelta(minutes=TIME_TOLERANCE_MINUTES)
 
     sent_alerts = load_sent_alerts()
-
-    ht_fixtures = _load_fixtures(HT_FILE)
     t2_fixtures = _load_fixtures(T2_FILE)
-    logger.info("🔍 HT fixtures: %d | 2T fixtures: %d", len(ht_fixtures), len(t2_fixtures))
+    logger.info("🔍 2T fixtures: %d", len(t2_fixtures))
 
-    ht_to_send = []   # (kickoff_dt, fixture)
-    t2_to_send = []   # (kickoff_dt, fixture)
+    to_send = []
 
-    def _kickoff(f) -> datetime | None:
-        match_date = f.get("match_date", "")
-        match_time = f.get("match_time", "") or "00:00"
-        dt_str = f"{match_date}T{match_time}:00" if match_date else None
-        return parser.isoparse(dt_str) if dt_str else None
-
-    # ── Over 0.5 HT (+15min) ──
-    for f in ht_fixtures:
-        mid = f["match_id"]
-        state = sent_alerts.setdefault(mid, {"ht_sent": False, "2t_sent": False})
-        if state["ht_sent"]:
-            continue
-        ko = _kickoff(f)
-        if ko and abs(now - (ko + timedelta(minutes=HT_OFFSET_MINUTES))) <= tolerance:
-            ht_to_send.append((ko, f))
-            state["ht_sent"] = True
-
-    # ── Over 0.5 2T (+50min) ──
     for f in t2_fixtures:
         mid = f["match_id"]
-        state = sent_alerts.setdefault(mid, {"ht_sent": False, "2t_sent": False})
-        if state["2t_sent"]:
+        state = sent_alerts.setdefault(mid, {"sent": False})
+        if state["sent"]:
             continue
         ko = _kickoff(f)
-        if ko and abs(now - (ko + timedelta(minutes=T2_OFFSET_MINUTES))) <= tolerance:
-            t2_to_send.append((ko, f))
-            state["2t_sent"] = True
+        if ko is None:
+            logger.warning("⚠️ Orario sconosciuto per %s vs %s — alert saltato",
+                           f.get("home_team", "?"), f.get("away_team", "?"))
+            continue
+        alert_time = ko + timedelta(minutes=PRE_MATCH_OFFSET_MINUTES)
+        if abs(now - alert_time) <= tolerance:
+            to_send.append((ko, f))
+            state["sent"] = True
 
-    # ── Invia Over 0.5 HT ──
-    if ht_to_send:
+    if to_send:
         from collections import defaultdict
         groups: dict = defaultdict(list)
-        for ko, f in ht_to_send:
+        for ko, f in to_send:
             groups[ko.strftime("%H:%M")].append(f)
+
         for ko_time, group in sorted(groups.items()):
-            header = f"⚽ *PARTITA IN CORSO — Over 0.5 1° Tempo*\n{'─' * 30}\n"
+            header = f"👀 *DA MONITORARE — Over 0.5 2T*\n{'─' * 30}\n"
             blocks = []
             for f in group:
                 league = f.get("league_name") or f.get("league_id", "")
                 a = next((x for x in f.get("alerts", []) if x["market"] == "over_25"), None)
                 cs = f"`cs {a['confidence_score']:.0f}`" if a else ""
-                prob = f"`{a['prob_cal']*100:.0f}%`" if a else ""
+                prob = f"`Over 2.5 {a['prob_cal']*100:.0f}%`" if a else ""
                 blocks.append(
                     f"🏟 *{f['home_team']}* vs *{f['away_team']}*\n"
                     f"🏆 _{league}_\n"
-                    f"📊 Over 2.5 {prob} · {cs}\n"
-                    f"👉 Controlla il punteggio → se *0-0* entra su *Over 0.5 1T*"
+                    f"📊 {prob} · {cs}\n"
+                    f"👉 All'intervallo: se *0-0* e *SOT ≥ 10* → entra su *Over 0.5 2T*"
                 )
-            footer = f"\n{'─' * 30}\n_Kick-off {ko_time} · +15min · modello Over 2.5 Ultra Aggressivo_"
+            footer = f"\n{'─' * 30}\n_Kick-off {ko_time} · Profeta v2 Over 2.5_"
             send_telegram_message(header + "\n\n".join(blocks) + footer)
-            logger.info("📤 [HT +15min] Inviato %s (%d partite)", ko_time, len(group))
-
-    # ── Invia Over 0.5 2T ──
-    if t2_to_send:
-        from collections import defaultdict
-        groups2: dict = defaultdict(list)
-        for ko, f in t2_to_send:
-            groups2[ko.strftime("%H:%M")].append(f)
-        for ko_time, group in sorted(groups2.items()):
-            header = f"⏱ *SECONDO TEMPO — Over 0.5 2° Tempo*\n{'─' * 30}\n"
-            blocks = []
-            for f in group:
-                league = f.get("league_name") or f.get("league_id", "")
-                a25 = next((x for x in f.get("alerts", []) if x["market"] == "over_25"), None)
-                a15 = next((x for x in f.get("alerts", []) if x["market"] == "over_15"), None)
-                if a25:
-                    sig_line = f"📊 Over 2.5 `{a25['prob_cal']*100:.0f}%` · `cs {a25['confidence_score']:.0f}`"
-                else:
-                    sig_line = f"📊 Over 1.5 `cs {a15['confidence_score']:.0f}` · quota bassa ✓" if a15 else "📊 Segnale Over 1.5"
-                blocks.append(
-                    f"🏟 *{f['home_team']}* vs *{f['away_team']}*\n"
-                    f"🏆 _{league}_\n"
-                    f"{sig_line}\n"
-                    f"👉 Se è *0-0* → entra su *Over 0.5 2T*"
-                )
-            footer = f"\n{'─' * 30}\n_Kick-off {ko_time} · +50min · modello Profeta v2_"
-            send_telegram_message(header + "\n\n".join(blocks) + footer)
-            logger.info("📤 [2T +50min] Inviato %s (%d partite)", ko_time, len(group))
-
-    if not ht_to_send and not t2_to_send:
+            logger.info("📤 [pre-match -30min] Inviato %s (%d partite)", ko_time, len(group))
+    else:
         logger.info("📭 Nessuna partita da inviare in questa iterazione")
 
     save_sent_alerts(sent_alerts)
