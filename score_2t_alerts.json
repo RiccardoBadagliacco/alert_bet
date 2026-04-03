@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03 16:55:22.168246",
+  "generated_at": "2026-04-03 17:00:39.893495",
   "n": 29,
   "alerts": [
     {
@@ -7,7 +7,7 @@
       "home_team": "Freiburg",
       "away_team": "Bayern Munich",
       "match_date": "2026-04-04",
-      "match_time": "00:00",
+      "match_time": "14:30",
       "league_id": "dddcc6b7-8f1c-4540-9fe4-0fce80747c62",
       "alerts": [
         {
@@ -22,7 +22,7 @@
       "home_team": "Stuttgart",
       "away_team": "Dortmund",
       "match_date": "2026-04-04",
-      "match_time": "00:00",
+      "match_time": "17:30",
       "league_id": "dddcc6b7-8f1c-4540-9fe4-0fce80747c62",
       "alerts": [
         {
@@ -37,7 +37,7 @@
       "home_team": "Ranger's",
       "away_team": "Dundee United",
       "match_date": "2026-04-04",
-      "match_time": "00:00",
+      "match_time": "15:00",
       "league_id": "85e1df24-b002-4538-84e9-4a2731c10229",
       "alerts": [
         {
@@ -52,7 +52,7 @@
       "home_team": "Qarabag",
       "away_team": "Kapaz",
       "match_date": "2026-01-23",
-      "match_time": "00:00",
+      "match_time": "15:00",
       "league_id": "de44b010-fca2-4988-be89-a15564028f5e",
       "alerts": [
         {
@@ -67,7 +67,7 @@
       "home_team": "Paris SG",
       "away_team": "Toulouse",
       "match_date": "2026-04-03",
-      "match_time": "00:00",
+      "match_time": "19:45",
       "league_id": "519030dd-e48d-4a99-8b51-78ef7e4e9da6",
       "alerts": [
         {
@@ -82,7 +82,7 @@
       "home_team": "Tanjong Pagar",
       "away_team": "Lion City Sailors",
       "match_date": "2026-04-06",
-      "match_time": "00:00",
+      "match_time": "11:30",
       "league_id": "57d47f5e-8e28-4f44-a575-3e9dba434986",
       "alerts": [
         {
@@ -97,7 +97,7 @@
       "home_team": "Red Star Belgrade",
       "away_team": "Zeleznicar Pancevo",
       "match_date": "2025-09-13",
-      "match_time": "00:00",
+      "match_time": "15:00",
       "league_id": "80f33909-6561-4a5e-97c4-f96f4406b8cd",
       "alerts": [
         {
@@ -112,7 +112,7 @@
       "home_team": "Al Hilal",
       "away_team": "Al Kholood",
       "match_date": "2026-04-08",
-      "match_time": "00:00",
+      "match_time": "18:00",
       "league_id": "3d53d6d3-eacf-409b-887f-27160051b664",
       "alerts": [
         {
@@ -127,7 +127,7 @@
       "home_team": "Noah",
       "away_team": "BKMA",
       "match_date": "2025-08-10",
-      "match_time": "00:00",
+      "match_time": "15:00",
       "league_id": "e5f2dcca-d0a4-44ab-ac38-55363f817769",
       "alerts": [
         {
@@ -142,7 +142,7 @@
       "home_team": "Al Ahli",
       "away_team": "Damak",
       "match_date": "2026-04-04",
-      "match_time": "00:00",
+      "match_time": "16:15",
       "league_id": "3d53d6d3-eacf-409b-887f-27160051b664",
       "alerts": [
         {
@@ -157,7 +157,7 @@
       "home_team": "Jaro",
       "away_team": "KaPa",
       "match_date": "2024-04-24",
-      "match_time": "00:00",
+      "match_time": "15:30",
       "league_id": "f4e83cca-3e7e-4a30-af71-a999aa9070c9",
       "alerts": [
         {
@@ -172,7 +172,7 @@
       "home_team": "Club Brugge",
       "away_team": "Anderlecht",
       "match_date": "2026-04-06",
-      "match_time": "00:00",
+      "match_time": "12:30",
       "league_id": "4768e1ba-71ce-43a5-afb9-d02ea1299bdb",
       "alerts": [
         {
@@ -187,7 +187,7 @@
       "home_team": "Volendam",
       "away_team": "Feyenoord",
       "match_date": "2026-04-05",
-      "match_time": "00:00",
+      "match_time": "13:30",
       "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
       "alerts": [
         {
@@ -202,7 +202,7 @@
       "home_team": "Inter Miami",
       "away_team": "Austin FC",
       "match_date": "2026-04-05",
-      "match_time": "00:00",
+      "match_time": "00:30",
       "league_id": "e3bc7110-863e-48d8-b2b4-ce8dc3f07421",
       "alerts": [
         {
@@ -217,7 +217,7 @@
       "home_team": "Celje",
       "away_team": "Domzale",
       "match_date": "2026-03-07",
-      "match_time": "00:00",
+      "match_time": "15:00",
       "league_id": "8ed17259-6318-43e7-ab30-d3002251cf86",
       "alerts": [
         {
@@ -232,7 +232,7 @@
       "home_team": "Ajax",
       "away_team": "Twente",
       "match_date": "2026-04-04",
-      "match_time": "00:00",
+      "match_time": "20:00",
       "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
       "alerts": [
         {
@@ -247,7 +247,7 @@
       "home_team": "Ath Madrid",
       "away_team": "Barcelona",
       "match_date": "2026-04-04",
-      "match_time": "00:00",
+      "match_time": "20:00",
       "league_id": "7f22127a-95f0-498e-a9ab-f7a63655576b",
       "alerts": [
         {
@@ -262,7 +262,7 @@
       "home_team": "AZ Alkmaar",
       "away_team": "For Sittard",
       "match_date": "2026-04-04",
-      "match_time": "00:00",
+      "match_time": "17:45",
       "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
       "alerts": [
         {
@@ -277,7 +277,7 @@
       "home_team": "Los Angeles FC",
       "away_team": "Orlando City",
       "match_date": "2026-04-05",
-      "match_time": "00:00",
+      "match_time": "02:30",
       "league_id": "e3bc7110-863e-48d8-b2b4-ce8dc3f07421",
       "alerts": [
         {
@@ -292,7 +292,7 @@
       "home_team": "Al Hilal",
       "away_team": "Al Taawon",
       "match_date": "2026-04-04",
-      "match_time": "00:00",
+      "match_time": "18:00",
       "league_id": "3d53d6d3-eacf-409b-887f-27160051b664",
       "alerts": [
         {
@@ -307,7 +307,7 @@
       "home_team": "ADO Den Haag",
       "away_team": "Ajax II",
       "match_date": "2026-04-03",
-      "match_time": "00:00",
+      "match_time": "18:00",
       "league_id": "34b551b1-2d73-47aa-9772-c949a139f413",
       "alerts": [
         {
@@ -322,7 +322,7 @@
       "home_team": "SK Poltava",
       "away_team": "Dinamo Kiev",
       "match_date": "2026-05-23",
-      "match_time": "00:00",
+      "match_time": "15:00",
       "league_id": "de0c5683-9c3f-4160-bfce-89732abe7c2f",
       "alerts": [
         {
@@ -337,7 +337,7 @@
       "home_team": "ADO Den Haag",
       "away_team": "Vitesse",
       "match_date": "2025-08-22",
-      "match_time": "00:00",
+      "match_time": "18:00",
       "league_id": "34b551b1-2d73-47aa-9772-c949a139f413",
       "alerts": [
         {
@@ -352,7 +352,7 @@
       "home_team": "ADO Den Haag",
       "away_team": "Eindhoven",
       "match_date": "2026-04-06",
-      "match_time": "00:00",
+      "match_time": "14:45",
       "league_id": "34b551b1-2d73-47aa-9772-c949a139f413",
       "alerts": [
         {
@@ -367,7 +367,7 @@
       "home_team": "TPS",
       "away_team": "KaPa",
       "match_date": "2024-05-04",
-      "match_time": "00:00",
+      "match_time": "13:00",
       "league_id": "f4e83cca-3e7e-4a30-af71-a999aa9070c9",
       "alerts": [
         {
@@ -382,7 +382,7 @@
       "home_team": "Leverkusen",
       "away_team": "Wolfsburg",
       "match_date": "2026-04-04",
-      "match_time": "00:00",
+      "match_time": "14:30",
       "league_id": "dddcc6b7-8f1c-4540-9fe4-0fce80747c62",
       "alerts": [
         {
@@ -397,7 +397,7 @@
       "home_team": "KTP",
       "away_team": "KaPa",
       "match_date": "2024-05-27",
-      "match_time": "00:00",
+      "match_time": "15:30",
       "league_id": "f4e83cca-3e7e-4a30-af71-a999aa9070c9",
       "alerts": [
         {
@@ -412,7 +412,7 @@
       "home_team": "SK Poltava",
       "away_team": "Polissya",
       "match_date": "2026-04-10",
-      "match_time": "00:00",
+      "match_time": "10:00",
       "league_id": "de0c5683-9c3f-4160-bfce-89732abe7c2f",
       "alerts": [
         {
@@ -427,7 +427,7 @@
       "home_team": "Sp Lisbon",
       "away_team": "Santa Clara",
       "match_date": "2026-04-03",
-      "match_time": "00:00",
+      "match_time": "20:30",
       "league_id": "14dbce63-e0df-4d7d-b5cd-a003f395f276",
       "alerts": [
         {
