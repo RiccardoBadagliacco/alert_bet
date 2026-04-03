@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-03 17:00:39.893495",
-  "n": 29,
+  "generated_at": "2026-04-03 20:24:20.899639",
+  "n": 31,
   "alerts": [
     {
       "match_id": "7d49d06d-2f8c-4c13-b9b4-b2b6f6eb6988",
@@ -9,6 +9,10 @@
       "match_date": "2026-04-04",
       "match_time": "14:30",
       "league_id": "dddcc6b7-8f1c-4540-9fe4-0fce80747c62",
+      "league_name": "Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.36,
       "alerts": [
         {
           "market": "over_25",
@@ -24,11 +28,53 @@
       "match_date": "2026-04-04",
       "match_time": "17:30",
       "league_id": "dddcc6b7-8f1c-4540-9fe4-0fce80747c62",
+      "league_name": "Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.42,
       "alerts": [
         {
           "market": "over_25",
           "prob_cal": 0.7855,
           "confidence_score": 1040.8
+        }
+      ]
+    },
+    {
+      "match_id": "131b5dc8-db79-4193-a3dc-55268cafc496",
+      "home_team": "PSV Eindhoven",
+      "away_team": "Utrecht",
+      "match_date": "2026-04-04",
+      "match_time": "15:30",
+      "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
+      "league_name": "Eredivisie",
+      "country": "Netherlands",
+      "signal": "B",
+      "avg_over_25_odds": 1.41,
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.8642,
+          "confidence_score": 1027.3
+        }
+      ]
+    },
+    {
+      "match_id": "ea2b6982-7c79-4e64-bcc5-35204fd32596",
+      "home_team": "Heerenveen",
+      "away_team": "Heracles",
+      "match_date": "2026-04-05",
+      "match_time": "13:30",
+      "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
+      "league_name": "Eredivisie",
+      "country": "Netherlands",
+      "signal": "B",
+      "avg_over_25_odds": 1.41,
+      "alerts": [
+        {
+          "market": "over_15",
+          "prob_cal": 0.8642,
+          "confidence_score": 974.1
         }
       ]
     },
@@ -39,6 +85,10 @@
       "match_date": "2026-04-04",
       "match_time": "15:00",
       "league_id": "85e1df24-b002-4538-84e9-4a2731c10229",
+      "league_name": "Scottish Premiership",
+      "country": "Scotland",
+      "signal": "A",
+      "avg_over_25_odds": 1.44,
       "alerts": [
         {
           "market": "over_25",
@@ -54,6 +104,10 @@
       "match_date": "2026-01-23",
       "match_time": "15:00",
       "league_id": "de44b010-fca2-4988-be89-a15564028f5e",
+      "league_name": "Premyer Liqa",
+      "country": "Azerbaijan",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -69,6 +123,10 @@
       "match_date": "2026-04-03",
       "match_time": "19:45",
       "league_id": "519030dd-e48d-4a99-8b51-78ef7e4e9da6",
+      "league_name": "Ligue 1",
+      "country": "France",
+      "signal": "A",
+      "avg_over_25_odds": 1.42,
       "alerts": [
         {
           "market": "over_25",
@@ -84,6 +142,10 @@
       "match_date": "2026-04-06",
       "match_time": "11:30",
       "league_id": "57d47f5e-8e28-4f44-a575-3e9dba434986",
+      "league_name": "Premier League",
+      "country": "Singapore",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -99,6 +161,10 @@
       "match_date": "2025-09-13",
       "match_time": "15:00",
       "league_id": "80f33909-6561-4a5e-97c4-f96f4406b8cd",
+      "league_name": "Super Liga",
+      "country": "Serbia",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -114,6 +180,10 @@
       "match_date": "2026-04-08",
       "match_time": "18:00",
       "league_id": "3d53d6d3-eacf-409b-887f-27160051b664",
+      "league_name": "Saudi Pro League",
+      "country": "Saudi Arabia",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -129,6 +199,10 @@
       "match_date": "2025-08-10",
       "match_time": "15:00",
       "league_id": "e5f2dcca-d0a4-44ab-ac38-55363f817769",
+      "league_name": "Premier League",
+      "country": "Armenia",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -144,6 +218,10 @@
       "match_date": "2026-04-04",
       "match_time": "16:15",
       "league_id": "3d53d6d3-eacf-409b-887f-27160051b664",
+      "league_name": "Saudi Pro League",
+      "country": "Saudi Arabia",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -159,6 +237,10 @@
       "match_date": "2024-04-24",
       "match_time": "15:30",
       "league_id": "f4e83cca-3e7e-4a30-af71-a999aa9070c9",
+      "league_name": "Ykkonen",
+      "country": "Finland",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -174,6 +256,10 @@
       "match_date": "2026-04-06",
       "match_time": "12:30",
       "league_id": "4768e1ba-71ce-43a5-afb9-d02ea1299bdb",
+      "league_name": "Jupiler Pro League",
+      "country": "Belgium",
+      "signal": "A",
+      "avg_over_25_odds": 1.46,
       "alerts": [
         {
           "market": "over_25",
@@ -189,6 +275,10 @@
       "match_date": "2026-04-05",
       "match_time": "13:30",
       "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
+      "league_name": "Eredivisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": 1.42,
       "alerts": [
         {
           "market": "over_25",
@@ -204,6 +294,10 @@
       "match_date": "2026-04-05",
       "match_time": "00:30",
       "league_id": "e3bc7110-863e-48d8-b2b4-ce8dc3f07421",
+      "league_name": "MLS",
+      "country": "USA",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -219,6 +313,10 @@
       "match_date": "2026-03-07",
       "match_time": "15:00",
       "league_id": "8ed17259-6318-43e7-ab30-d3002251cf86",
+      "league_name": "1. SNL",
+      "country": "Slovenia",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -234,6 +332,10 @@
       "match_date": "2026-04-04",
       "match_time": "20:00",
       "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
+      "league_name": "Eredivisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": 1.53,
       "alerts": [
         {
           "market": "over_25",
@@ -249,6 +351,10 @@
       "match_date": "2026-04-04",
       "match_time": "20:00",
       "league_id": "7f22127a-95f0-498e-a9ab-f7a63655576b",
+      "league_name": "La Liga",
+      "country": "Spain",
+      "signal": "A",
+      "avg_over_25_odds": 1.45,
       "alerts": [
         {
           "market": "over_25",
@@ -264,6 +370,10 @@
       "match_date": "2026-04-04",
       "match_time": "17:45",
       "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
+      "league_name": "Eredivisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": 1.39,
       "alerts": [
         {
           "market": "over_25",
@@ -279,6 +389,10 @@
       "match_date": "2026-04-05",
       "match_time": "02:30",
       "league_id": "e3bc7110-863e-48d8-b2b4-ce8dc3f07421",
+      "league_name": "MLS",
+      "country": "USA",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -294,6 +408,10 @@
       "match_date": "2026-04-04",
       "match_time": "18:00",
       "league_id": "3d53d6d3-eacf-409b-887f-27160051b664",
+      "league_name": "Saudi Pro League",
+      "country": "Saudi Arabia",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -309,6 +427,10 @@
       "match_date": "2026-04-03",
       "match_time": "18:00",
       "league_id": "34b551b1-2d73-47aa-9772-c949a139f413",
+      "league_name": "Eerste Divisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -324,6 +446,10 @@
       "match_date": "2026-05-23",
       "match_time": "15:00",
       "league_id": "de0c5683-9c3f-4160-bfce-89732abe7c2f",
+      "league_name": "Premier League",
+      "country": "Ukraine",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -339,6 +465,10 @@
       "match_date": "2025-08-22",
       "match_time": "18:00",
       "league_id": "34b551b1-2d73-47aa-9772-c949a139f413",
+      "league_name": "Eerste Divisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -354,6 +484,10 @@
       "match_date": "2026-04-06",
       "match_time": "14:45",
       "league_id": "34b551b1-2d73-47aa-9772-c949a139f413",
+      "league_name": "Eerste Divisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -369,6 +503,10 @@
       "match_date": "2024-05-04",
       "match_time": "13:00",
       "league_id": "f4e83cca-3e7e-4a30-af71-a999aa9070c9",
+      "league_name": "Ykkonen",
+      "country": "Finland",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -384,6 +522,10 @@
       "match_date": "2026-04-04",
       "match_time": "14:30",
       "league_id": "dddcc6b7-8f1c-4540-9fe4-0fce80747c62",
+      "league_name": "Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.44,
       "alerts": [
         {
           "market": "over_25",
@@ -399,6 +541,10 @@
       "match_date": "2024-05-27",
       "match_time": "15:30",
       "league_id": "f4e83cca-3e7e-4a30-af71-a999aa9070c9",
+      "league_name": "Ykkonen",
+      "country": "Finland",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -414,6 +560,10 @@
       "match_date": "2026-04-10",
       "match_time": "10:00",
       "league_id": "de0c5683-9c3f-4160-bfce-89732abe7c2f",
+      "league_name": "Premier League",
+      "country": "Ukraine",
+      "signal": "A",
+      "avg_over_25_odds": null,
       "alerts": [
         {
           "market": "over_25",
@@ -429,6 +579,10 @@
       "match_date": "2026-04-03",
       "match_time": "20:30",
       "league_id": "14dbce63-e0df-4d7d-b5cd-a003f395f276",
+      "league_name": "Primeira Liga",
+      "country": "Portugal",
+      "signal": "A",
+      "avg_over_25_odds": 1.75,
       "alerts": [
         {
           "market": "over_25",
