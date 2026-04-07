@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-07 10:10:37.227740",
+  "generated_at": "2026-04-07 10:21:22.731796",
   "n": 18,
   "alerts": [
     {
@@ -106,7 +106,7 @@
       "alerts": [
         {
           "market": "over_25",
-          "confidence_score": 865.7
+          "confidence_score": 865.6
         }
       ]
     },
@@ -160,7 +160,7 @@
       "alerts": [
         {
           "market": "over_25",
-          "confidence_score": 681.2
+          "confidence_score": 681.1
         }
       ]
     },
@@ -250,7 +250,7 @@
       "alerts": [
         {
           "market": "over_25",
-          "confidence_score": 662.2
+          "confidence_score": 661.6
         }
       ]
     },
@@ -304,7 +304,7 @@
       "alerts": [
         {
           "market": "over_25",
-          "confidence_score": 632.9
+          "confidence_score": 632.8
         }
       ]
     },
