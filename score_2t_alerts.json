@@ -1,135 +1,9 @@
 {
-  "generated_at": "2026-04-07 10:21:22.731796",
-  "n": 18,
+  "generated_at": "2026-04-10 17:24:56.903205",
+  "n": 102,
   "alerts": [
     {
-      "match_id": "96514489-3acf-48a2-b88f-d55403de5b2c",
-      "home_team": "Waldhof Mannheim",
-      "away_team": "Hoffenheim II",
-      "match_date": "2026-04-07",
-      "match_time": "17:00",
-      "league_id": "7bbd6e7f-a730-4ad6-9d12-73479d540951",
-      "league_name": "3. Liga",
-      "country": "Germany",
-      "signal": "A",
-      "avg_over_25_odds": null,
-      "alerts": [
-        {
-          "market": "over_25",
-          "confidence_score": 618.1
-        }
-      ]
-    },
-    {
-      "match_id": "39b24f56-8c41-40d8-ba18-f548f78ee314",
-      "home_team": "Aalesund",
-      "away_team": "Fredrikstad",
-      "match_date": "2026-04-07",
-      "match_time": "18:00",
-      "league_id": "2dd91617-1721-4f92-af4c-617ebccb3905",
-      "league_name": "Eliteserien",
-      "country": "Norway",
-      "signal": "A",
-      "avg_over_25_odds": null,
-      "alerts": [
-        {
-          "market": "over_25",
-          "confidence_score": 631.7
-        }
-      ]
-    },
-    {
-      "match_id": "a6a8cb81-857f-4cdc-b954-d799e4c0e348",
-      "home_team": "KFUM Oslo",
-      "away_team": "Sandefjord",
-      "match_date": "2026-04-07",
-      "match_time": "18:00",
-      "league_id": "2dd91617-1721-4f92-af4c-617ebccb3905",
-      "league_name": "Eliteserien",
-      "country": "Norway",
-      "signal": "A",
-      "avg_over_25_odds": null,
-      "alerts": [
-        {
-          "market": "over_25",
-          "confidence_score": 629.0
-        }
-      ]
-    },
-    {
-      "match_id": "2791930f-6dc6-44ef-b8bf-207f24421d10",
-      "home_team": "Ingolstadt",
-      "away_team": "Viktoria Koln",
-      "match_date": "2026-04-08",
-      "match_time": "17:00",
-      "league_id": "7bbd6e7f-a730-4ad6-9d12-73479d540951",
-      "league_name": "3. Liga",
-      "country": "Germany",
-      "signal": "A",
-      "avg_over_25_odds": null,
-      "alerts": [
-        {
-          "market": "over_25",
-          "confidence_score": 637.3
-        }
-      ]
-    },
-    {
-      "match_id": "0e0d6b69-04ab-4da6-869f-81236b7b8b9d",
-      "home_team": "Al Hilal",
-      "away_team": "Al Kholood",
-      "match_date": "2026-04-08",
-      "match_time": "18:00",
-      "league_id": "3d53d6d3-eacf-409b-887f-27160051b664",
-      "league_name": "Saudi Pro League",
-      "country": "Saudi Arabia",
-      "signal": "A",
-      "avg_over_25_odds": null,
-      "alerts": [
-        {
-          "market": "over_25",
-          "confidence_score": 845.1
-        }
-      ]
-    },
-    {
-      "match_id": "3e6603f1-2515-4292-8b61-ad546f028c25",
-      "home_team": "Red Star Belgrade",
-      "away_team": "Spartak Subotica",
-      "match_date": "2026-04-09",
-      "match_time": "17:00",
-      "league_id": "80f33909-6561-4a5e-97c4-f96f4406b8cd",
-      "league_name": "Super Liga",
-      "country": "Serbia",
-      "signal": "A",
-      "avg_over_25_odds": null,
-      "alerts": [
-        {
-          "market": "over_25",
-          "confidence_score": 865.6
-        }
-      ]
-    },
-    {
-      "match_id": "aff30fc6-2fe2-4202-8636-3c076899dc26",
-      "home_team": "SK Poltava",
-      "away_team": "Polissya",
-      "match_date": "2026-04-10",
-      "match_time": "10:00",
-      "league_id": "de0c5683-9c3f-4160-bfce-89732abe7c2f",
-      "league_name": "Premier League",
-      "country": "Ukraine",
-      "signal": "A",
-      "avg_over_25_odds": null,
-      "alerts": [
-        {
-          "market": "over_25",
-          "confidence_score": 725.7
-        }
-      ]
-    },
-    {
-      "match_id": "20cbd8fd-391d-4631-bf7d-51562272dca0",
+      "match_id": "908020e3-7978-4c9d-b445-f2febefd406a",
       "home_team": "Shamakhi",
       "away_team": "Qarabag",
       "match_date": "2026-04-10",
@@ -142,12 +16,102 @@
       "alerts": [
         {
           "market": "over_25",
-          "confidence_score": 624.3
+          "confidence_score": 654.8
         }
       ]
     },
     {
-      "match_id": "37451150-e388-48c7-b440-f69899e9ca14",
+      "match_id": "e06f9dfe-701e-4fcf-890c-eccfc951fe66",
+      "home_team": "SJK",
+      "away_team": "Mariehamn",
+      "match_date": "2026-04-10",
+      "match_time": "17:00",
+      "league_id": "0a73fe70-393b-4ea4-a1c8-33e17c583e48",
+      "league_name": "Veikkausliiga",
+      "country": "Finland",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 656.9
+        }
+      ]
+    },
+    {
+      "match_id": "4417cb92-1a9c-4e42-b435-b20faf630724",
+      "home_team": "Fortuna Dusseldorf",
+      "away_team": "Holstein Kiel",
+      "match_date": "2026-04-10",
+      "match_time": "17:30",
+      "league_id": "73a8807f-1971-42a2-8c70-b6bdd1d21b02",
+      "league_name": "2. Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.63,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 639.5
+        }
+      ]
+    },
+    {
+      "match_id": "b69679be-99fe-4a8f-8f9d-97d38a6a1310",
+      "home_team": "Karlsruhe",
+      "away_team": "Bielefeld",
+      "match_date": "2026-04-10",
+      "match_time": "17:30",
+      "league_id": "73a8807f-1971-42a2-8c70-b6bdd1d21b02",
+      "league_name": "2. Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.57,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 677.9
+        }
+      ]
+    },
+    {
+      "match_id": "af25867b-aa85-4eea-a700-e66039efe3d3",
+      "home_team": "VPS",
+      "away_team": "Jaro",
+      "match_date": "2026-04-10",
+      "match_time": "18:00",
+      "league_id": "0a73fe70-393b-4ea4-a1c8-33e17c583e48",
+      "league_name": "Veikkausliiga",
+      "country": "Finland",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 661.7
+        }
+      ]
+    },
+    {
+      "match_id": "ae4c5dc7-f041-4802-a089-3106543786f0",
+      "home_team": "Paris FC",
+      "away_team": "Monaco",
+      "match_date": "2026-04-10",
+      "match_time": "18:00",
+      "league_id": "519030dd-e48d-4a99-8b51-78ef7e4e9da6",
+      "league_name": "Ligue 1",
+      "country": "France",
+      "signal": "A",
+      "avg_over_25_odds": 1.61,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 662.1
+        }
+      ]
+    },
+    {
+      "match_id": "cefa23b2-f190-4fa6-a05e-735085082d86",
       "home_team": "Ferencvaros",
       "away_team": "Diosgyor",
       "match_date": "2026-04-10",
@@ -160,12 +124,30 @@
       "alerts": [
         {
           "market": "over_25",
-          "confidence_score": 681.1
+          "confidence_score": 681.5
         }
       ]
     },
     {
-      "match_id": "3141b45a-3284-476d-9242-f35de1feb906",
+      "match_id": "f6d227e2-d3de-4572-a303-301cb7194c5a",
+      "home_team": "MVV",
+      "away_team": "Helmond Sport",
+      "match_date": "2026-04-10",
+      "match_time": "18:00",
+      "league_id": "34b551b1-2d73-47aa-9772-c949a139f413",
+      "league_name": "Eerste Divisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 602.7
+        }
+      ]
+    },
+    {
+      "match_id": "4f547151-0c0f-4793-a68c-f596afffafaa",
       "home_team": "Den Bosch",
       "away_team": "Cambuur",
       "match_date": "2026-04-10",
@@ -178,12 +160,12 @@
       "alerts": [
         {
           "market": "over_25",
-          "confidence_score": 629.8
+          "confidence_score": 637.7
         }
       ]
     },
     {
-      "match_id": "6cab59ac-a1d0-4ca8-8f82-8eba7c500b3c",
+      "match_id": "377f8f60-df78-47e2-b9eb-addf52410b94",
       "home_team": "Eindhoven",
       "away_team": "Roda JC",
       "match_date": "2026-04-10",
@@ -196,12 +178,156 @@
       "alerts": [
         {
           "market": "over_25",
-          "confidence_score": 632.1
+          "confidence_score": 668.0
         }
       ]
     },
     {
-      "match_id": "ccd08d65-0a77-402d-b902-c29af4677998",
+      "match_id": "77a9210b-b969-4f8a-a721-46814ff5411b",
+      "home_team": "Besiktas",
+      "away_team": "Antalyaspor",
+      "match_date": "2026-04-10",
+      "match_time": "18:00",
+      "league_id": "1e8cadbf-4ce5-4bce-948d-c795ec5f8265",
+      "league_name": "S\u00fcper Lig",
+      "country": "Turkey",
+      "signal": "A",
+      "avg_over_25_odds": 1.46,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 758.9
+        }
+      ]
+    },
+    {
+      "match_id": "814541a9-6e34-4041-a092-2d380078df79",
+      "home_team": "Twente",
+      "away_team": "Volendam",
+      "match_date": "2026-04-10",
+      "match_time": "19:00",
+      "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
+      "league_name": "Eredivisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": 1.29,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 1034.3
+        }
+      ]
+    },
+    {
+      "match_id": "0a4ded3c-8520-4e58-808d-abf87610421d",
+      "home_team": "Augsburg",
+      "away_team": "Hoffenheim",
+      "match_date": "2026-04-10",
+      "match_time": "19:30",
+      "league_id": "dddcc6b7-8f1c-4540-9fe4-0fce80747c62",
+      "league_name": "Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.55,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 746.3
+        }
+      ]
+    },
+    {
+      "match_id": "4faffc4d-bcf9-4f94-ad36-2b8f2d51a7a4",
+      "home_team": "Real Madrid",
+      "away_team": "Girona",
+      "match_date": "2026-04-10",
+      "match_time": "20:00",
+      "league_id": "7f22127a-95f0-498e-a9ab-f7a63655576b",
+      "league_name": "La Liga",
+      "country": "Spain",
+      "signal": "A",
+      "avg_over_25_odds": 1.42,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 838.7
+        }
+      ]
+    },
+    {
+      "match_id": "0bb1bae5-fddf-4e63-b46e-1cd17e54fec1",
+      "home_team": "Marseille",
+      "away_team": "Metz",
+      "match_date": "2026-04-10",
+      "match_time": "20:05",
+      "league_id": "519030dd-e48d-4a99-8b51-78ef7e4e9da6",
+      "league_name": "Ligue 1",
+      "country": "France",
+      "signal": "A",
+      "avg_over_25_odds": 1.38,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 826.8
+        }
+      ]
+    },
+    {
+      "match_id": "f49f455e-eacd-4dd7-819f-0ec85839b3c6",
+      "home_team": "Borneo",
+      "away_team": "PSBS Biak Numfor",
+      "match_date": "2026-04-11",
+      "match_time": "08:30",
+      "league_id": "b3cf7cda-3e37-4218-9af7-1cd8834a61bf",
+      "league_name": "Liga 1",
+      "country": "Indonesia",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 1013.3
+        }
+      ]
+    },
+    {
+      "match_id": "1e7bd9cc-94fb-426f-b082-9d4f51588b97",
+      "home_team": "KuPS",
+      "away_team": "Gnistan",
+      "match_date": "2026-04-11",
+      "match_time": "12:00",
+      "league_id": "0a73fe70-393b-4ea4-a1c8-33e17c583e48",
+      "league_name": "Veikkausliiga",
+      "country": "Finland",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 743.9
+        }
+      ]
+    },
+    {
+      "match_id": "cc6daeff-1f64-492b-902c-c346c55ec3ea",
+      "home_team": "Hertha",
+      "away_team": "Kaiserslautern",
+      "match_date": "2026-04-11",
+      "match_time": "12:00",
+      "league_id": "73a8807f-1971-42a2-8c70-b6bdd1d21b02",
+      "league_name": "2. Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.52,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 676.3
+        }
+      ]
+    },
+    {
+      "match_id": "beea3321-7e31-4372-af43-df05b9573e2a",
       "home_team": "Rot-Weiss Essen",
       "away_team": "Ingolstadt",
       "match_date": "2026-04-11",
@@ -214,12 +340,246 @@
       "alerts": [
         {
           "market": "over_25",
-          "confidence_score": 627.8
+          "confidence_score": 674.8
         }
       ]
     },
     {
-      "match_id": "99d7b936-e41d-4ab6-8c3b-98d90202ea7c",
+      "match_id": "59d80301-44e1-4e4e-90e3-b905b4d70185",
+      "home_team": "Persija",
+      "away_team": "Persebaya Surabaya",
+      "match_date": "2026-04-11",
+      "match_time": "12:00",
+      "league_id": "b3cf7cda-3e37-4218-9af7-1cd8834a61bf",
+      "league_name": "Liga 1",
+      "country": "Indonesia",
+      "signal": "A",
+      "avg_over_25_odds": 1.75,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 601.6
+        }
+      ]
+    },
+    {
+      "match_id": "29587682-f43a-434a-977b-520ec9ad8633",
+      "home_team": "Arsenal",
+      "away_team": "Bournemouth",
+      "match_date": "2026-04-11",
+      "match_time": "12:30",
+      "league_id": "4345a182-9c71-49d0-96dc-316fa1dcf350",
+      "league_name": "Premier League",
+      "country": "England",
+      "signal": "A",
+      "avg_over_25_odds": 1.62,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 731.5
+        }
+      ]
+    },
+    {
+      "match_id": "a6dcdcc2-aba0-48bf-a82f-22320671de80",
+      "home_team": "Coventry",
+      "away_team": "Sheffield Weds",
+      "match_date": "2026-04-11",
+      "match_time": "12:30",
+      "league_id": "3f7e4407-d1f1-4d8e-91af-4941265ec6ee",
+      "league_name": "Championship",
+      "country": "England",
+      "signal": "A",
+      "avg_over_25_odds": 1.32,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 1017.5
+        }
+      ]
+    },
+    {
+      "match_id": "3a2d62b5-b9c5-40c6-992a-a04a68d14996",
+      "home_team": "Cardiff",
+      "away_team": "Bolton",
+      "match_date": "2026-04-11",
+      "match_time": "12:30",
+      "league_id": "000a5259-b2ba-4b9f-b25f-399095cb28bf",
+      "league_name": "League One",
+      "country": "England",
+      "signal": "A",
+      "avg_over_25_odds": 1.49,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 602.7
+        }
+      ]
+    },
+    {
+      "match_id": "486b89b0-a13b-45f4-9933-aaf787ca809e",
+      "home_team": "Plymouth",
+      "away_team": "Exeter",
+      "match_date": "2026-04-11",
+      "match_time": "12:30",
+      "league_id": "000a5259-b2ba-4b9f-b25f-399095cb28bf",
+      "league_name": "League One",
+      "country": "England",
+      "signal": "A",
+      "avg_over_25_odds": 1.6,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 662.0
+        }
+      ]
+    },
+    {
+      "match_id": "96307a09-886d-4d40-927d-f9c6a4ff0a80",
+      "home_team": "Henan Songshan Longmen",
+      "away_team": "Shandong Taishan",
+      "match_date": "2026-04-11",
+      "match_time": "12:35",
+      "league_id": "77293295-e9fa-4d26-9605-16d3eca1b050",
+      "league_name": "Super League",
+      "country": "China",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 608.1
+        }
+      ]
+    },
+    {
+      "match_id": "318c9698-822f-44c0-9cfc-e49820704396",
+      "home_team": "Shanghai Shenhua",
+      "away_team": "Shanghai Port",
+      "match_date": "2026-04-11",
+      "match_time": "12:35",
+      "league_id": "77293295-e9fa-4d26-9605-16d3eca1b050",
+      "league_name": "Super League",
+      "country": "China",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 693.3
+        }
+      ]
+    },
+    {
+      "match_id": "b3f5b7f3-a2b4-4b87-acbc-b0494bad29d2",
+      "home_team": "Lillestrom",
+      "away_team": "Start",
+      "match_date": "2026-04-11",
+      "match_time": "13:00",
+      "league_id": "2dd91617-1721-4f92-af4c-617ebccb3905",
+      "league_name": "Eliteserien",
+      "country": "Norway",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 684.7
+        }
+      ]
+    },
+    {
+      "match_id": "e199296e-b7a7-4b2a-81fe-8fd699787e55",
+      "home_team": "Olimpija",
+      "away_team": "Aluminij",
+      "match_date": "2026-04-11",
+      "match_time": "13:00",
+      "league_id": "8ed17259-6318-43e7-ab30-d3002251cf86",
+      "league_name": "1. SNL",
+      "country": "Slovenia",
+      "signal": "A",
+      "avg_over_25_odds": 1.72,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 603.8
+        }
+      ]
+    },
+    {
+      "match_id": "e17e1eba-d006-49eb-b853-0d23e2b0fcb1",
+      "home_team": "Mjallby",
+      "away_team": "Orgryte",
+      "match_date": "2026-04-11",
+      "match_time": "14:00",
+      "league_id": "a61f4baf-61af-465e-8255-fb598b596c88",
+      "league_name": "Allsvenskan",
+      "country": "Sweden",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 657.7
+        }
+      ]
+    },
+    {
+      "match_id": "12b904cb-7275-4046-a6bf-a62d140e1b82",
+      "home_team": "Dortmund",
+      "away_team": "Leverkusen",
+      "match_date": "2026-04-11",
+      "match_time": "14:30",
+      "league_id": "dddcc6b7-8f1c-4540-9fe4-0fce80747c62",
+      "league_name": "Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.51,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 838.0
+        }
+      ]
+    },
+    {
+      "match_id": "6a321d15-a9a1-4040-993f-5b07e66a0950",
+      "home_team": "RB Leipzig",
+      "away_team": "M'gladbach",
+      "match_date": "2026-04-11",
+      "match_time": "14:30",
+      "league_id": "dddcc6b7-8f1c-4540-9fe4-0fce80747c62",
+      "league_name": "Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.43,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 830.9
+        }
+      ]
+    },
+    {
+      "match_id": "984bb2cb-6c0c-4121-b82b-cf9c58f56cda",
+      "home_team": "Wolfsburg",
+      "away_team": "Ein Frankfurt",
+      "match_date": "2026-04-11",
+      "match_time": "14:30",
+      "league_id": "dddcc6b7-8f1c-4540-9fe4-0fce80747c62",
+      "league_name": "Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.56,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 651.4
+        }
+      ]
+    },
+    {
+      "match_id": "e8f6aa24-936a-48cd-a5e8-cb9165d5e1c8",
       "home_team": "VVV",
       "away_team": "De Graafschap",
       "match_date": "2026-04-11",
@@ -232,12 +592,84 @@
       "alerts": [
         {
           "market": "over_25",
-          "confidence_score": 629.2
+          "confidence_score": 652.3
         }
       ]
     },
     {
-      "match_id": "d09a6f1e-ffd3-4bd9-a5b2-8980fd44f58e",
+      "match_id": "a5ed1480-a68f-4804-83c5-355611a9f30c",
+      "home_team": "Blackpool",
+      "away_team": "Peterboro",
+      "match_date": "2026-04-11",
+      "match_time": "15:00",
+      "league_id": "000a5259-b2ba-4b9f-b25f-399095cb28bf",
+      "league_name": "League One",
+      "country": "England",
+      "signal": "A",
+      "avg_over_25_odds": 1.54,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 644.3
+        }
+      ]
+    },
+    {
+      "match_id": "b3da6fdf-daf8-4ed9-ab4d-ae66a5be1a29",
+      "home_team": "HJK",
+      "away_team": "AC Oulu",
+      "match_date": "2026-04-11",
+      "match_time": "15:00",
+      "league_id": "0a73fe70-393b-4ea4-a1c8-33e17c583e48",
+      "league_name": "Veikkausliiga",
+      "country": "Finland",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 662.6
+        }
+      ]
+    },
+    {
+      "match_id": "8494b1e0-8a94-4201-b5f6-211db2dd36de",
+      "home_team": "Tromso",
+      "away_team": "Kristiansund",
+      "match_date": "2026-04-11",
+      "match_time": "15:00",
+      "league_id": "2dd91617-1721-4f92-af4c-617ebccb3905",
+      "league_name": "Eliteserien",
+      "country": "Norway",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 749.9
+        }
+      ]
+    },
+    {
+      "match_id": "2938030b-1982-41a9-92de-c5b80c98cdaa",
+      "home_team": "Celtic",
+      "away_team": "St Mirren",
+      "match_date": "2026-04-11",
+      "match_time": "15:00",
+      "league_id": "85e1df24-b002-4538-84e9-4a2731c10229",
+      "league_name": "Scottish Premiership",
+      "country": "Scotland",
+      "signal": "A",
+      "avg_over_25_odds": 1.41,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 1110.3
+        }
+      ]
+    },
+    {
+      "match_id": "4f3ea9b5-d7e6-41cf-b4d5-ce91b5b58089",
       "home_team": "Maribor",
       "away_team": "Domzale",
       "match_date": "2026-04-11",
@@ -250,12 +682,120 @@
       "alerts": [
         {
           "market": "over_25",
-          "confidence_score": 661.6
+          "confidence_score": 649.2
         }
       ]
     },
     {
-      "match_id": "58089743-e43d-4102-951d-2f8f580e1148",
+      "match_id": "048487a3-6a77-4394-9000-91464c06d493",
+      "home_team": "Utrecht",
+      "away_team": "Telstar",
+      "match_date": "2026-04-11",
+      "match_time": "15:30",
+      "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
+      "league_name": "Eredivisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": 1.58,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 685.9
+        }
+      ]
+    },
+    {
+      "match_id": "5a738512-d805-4d7c-aa0f-5e804e03045c",
+      "home_team": "Viking",
+      "away_team": "Bodo/Glimt",
+      "match_date": "2026-04-11",
+      "match_time": "17:00",
+      "league_id": "2dd91617-1721-4f92-af4c-617ebccb3905",
+      "league_name": "Eliteserien",
+      "country": "Norway",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 786.1
+        }
+      ]
+    },
+    {
+      "match_id": "306ab705-aa96-47c5-b0bc-fee68b36d361",
+      "home_team": "Liverpool",
+      "away_team": "Fulham",
+      "match_date": "2026-04-11",
+      "match_time": "17:30",
+      "league_id": "4345a182-9c71-49d0-96dc-316fa1dcf350",
+      "league_name": "Premier League",
+      "country": "England",
+      "signal": "A",
+      "avg_over_25_odds": 1.53,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 686.7
+        }
+      ]
+    },
+    {
+      "match_id": "504b246a-9c11-4446-a2d1-6e7b16431157",
+      "home_team": "St Pauli",
+      "away_team": "Bayern Munich",
+      "match_date": "2026-04-11",
+      "match_time": "17:30",
+      "league_id": "dddcc6b7-8f1c-4540-9fe4-0fce80747c62",
+      "league_name": "Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.5,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 650.4
+        }
+      ]
+    },
+    {
+      "match_id": "72ba93d1-b1d9-4099-8c28-d0b9ba0965ab",
+      "home_team": "Barcelona",
+      "away_team": "Espanol",
+      "match_date": "2026-04-11",
+      "match_time": "17:30",
+      "league_id": "7f22127a-95f0-498e-a9ab-f7a63655576b",
+      "league_name": "La Liga",
+      "country": "Spain",
+      "signal": "A",
+      "avg_over_25_odds": 1.3,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 1085.0
+        }
+      ]
+    },
+    {
+      "match_id": "cb1bbbdd-24e7-4e36-bb21-a22efde21074",
+      "home_team": "Sparta Rotterdam",
+      "away_team": "PSV Eindhoven",
+      "match_date": "2026-04-11",
+      "match_time": "17:45",
+      "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
+      "league_name": "Eredivisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": 1.37,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 836.9
+        }
+      ]
+    },
+    {
+      "match_id": "4856d540-5c2b-417d-884e-7cf0c8810cdb",
       "home_team": "Al Akhdoud",
       "away_team": "Al Nassr",
       "match_date": "2026-04-11",
@@ -268,12 +808,786 @@
       "alerts": [
         {
           "market": "over_25",
-          "confidence_score": 761.8
+          "confidence_score": 823.1
         }
       ]
     },
     {
-      "match_id": "14ccc8a5-eec7-4fa8-aefb-323e1c1e7ef8",
+      "match_id": "194990ca-57a8-4981-8801-af76ecf2958d",
+      "home_team": "Kayserispor",
+      "away_team": "Fenerbahce",
+      "match_date": "2026-04-11",
+      "match_time": "18:00",
+      "league_id": "1e8cadbf-4ce5-4bce-948d-c795ec5f8265",
+      "league_name": "S\u00fcper Lig",
+      "country": "Turkey",
+      "signal": "A",
+      "avg_over_25_odds": 1.61,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 700.7
+        }
+      ]
+    },
+    {
+      "match_id": "f43a1828-036a-4749-b0ac-91a4757bcbc1",
+      "home_team": "Toronto FC",
+      "away_team": "FC Cincinnati",
+      "match_date": "2026-04-11",
+      "match_time": "18:00",
+      "league_id": "e3bc7110-863e-48d8-b2b4-ce8dc3f07421",
+      "league_name": "MLS",
+      "country": "USA",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 611.2
+        }
+      ]
+    },
+    {
+      "match_id": "36aaccf1-67dd-4762-94ec-c07c41e76e05",
+      "home_team": "Radomlje",
+      "away_team": "Celje",
+      "match_date": "2026-04-11",
+      "match_time": "18:15",
+      "league_id": "8ed17259-6318-43e7-ab30-d3002251cf86",
+      "league_name": "1. SNL",
+      "country": "Slovenia",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 604.2
+        }
+      ]
+    },
+    {
+      "match_id": "dcca742a-67c7-47cd-b193-4588af724565",
+      "home_team": "Monza",
+      "away_team": "Bari",
+      "match_date": "2026-04-11",
+      "match_time": "18:30",
+      "league_id": "cab7c842-2e00-4a07-a621-e0d05a98c6c2",
+      "league_name": "Serie B",
+      "country": "Italy",
+      "signal": "A",
+      "avg_over_25_odds": 1.67,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 621.7
+        }
+      ]
+    },
+    {
+      "match_id": "bf455a72-c82b-4d05-84d5-b0baab85c301",
+      "home_team": "Groningen",
+      "away_team": "Go Ahead Eagles",
+      "match_date": "2026-04-11",
+      "match_time": "19:00",
+      "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
+      "league_name": "Eredivisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": 1.5,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 665.2
+        }
+      ]
+    },
+    {
+      "match_id": "054a142e-677e-4550-900d-9c6fee4afbbe",
+      "home_team": "Darmstadt",
+      "away_team": "Hannover",
+      "match_date": "2026-04-11",
+      "match_time": "19:30",
+      "league_id": "73a8807f-1971-42a2-8c70-b6bdd1d21b02",
+      "league_name": "2. Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.55,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 653.2
+        }
+      ]
+    },
+    {
+      "match_id": "25caa5e0-53d3-4d8c-a742-639ff42219fc",
+      "home_team": "St Truiden",
+      "away_team": "Club Brugge",
+      "match_date": "2026-04-11",
+      "match_time": "19:45",
+      "league_id": "4768e1ba-71ce-43a5-afb9-d02ea1299bdb",
+      "league_name": "Jupiler Pro League",
+      "country": "Belgium",
+      "signal": "A",
+      "avg_over_25_odds": 1.47,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 721.2
+        }
+      ]
+    },
+    {
+      "match_id": "f721418a-cf58-48fb-a222-fd05c2e6d492",
+      "home_team": "Heracles",
+      "away_team": "Ajax",
+      "match_date": "2026-04-11",
+      "match_time": "20:00",
+      "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
+      "league_name": "Eredivisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": 1.48,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 644.8
+        }
+      ]
+    },
+    {
+      "match_id": "2247e46c-f1ee-49fc-90e2-221fae76751f",
+      "home_team": "Rennes",
+      "away_team": "Angers",
+      "match_date": "2026-04-11",
+      "match_time": "20:05",
+      "league_id": "519030dd-e48d-4a99-8b51-78ef7e4e9da6",
+      "league_name": "Ligue 1",
+      "country": "France",
+      "signal": "A",
+      "avg_over_25_odds": 1.64,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 622.9
+        }
+      ]
+    },
+    {
+      "match_id": "935981eb-5981-4b89-af7d-0d4bcb302933",
+      "home_team": "Estrela",
+      "away_team": "Sp Lisbon",
+      "match_date": "2026-04-11",
+      "match_time": "20:30",
+      "league_id": "14dbce63-e0df-4d7d-b5cd-a003f395f276",
+      "league_name": "Primeira Liga",
+      "country": "Portugal",
+      "signal": "A",
+      "avg_over_25_odds": 1.44,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 746.5
+        }
+      ]
+    },
+    {
+      "match_id": "6edc7afe-9b5c-4970-8274-65d8462030d9",
+      "home_team": "Portland Timbers",
+      "away_team": "Los Angeles FC",
+      "match_date": "2026-04-11",
+      "match_time": "21:45",
+      "league_id": "e3bc7110-863e-48d8-b2b4-ce8dc3f07421",
+      "league_name": "MLS",
+      "country": "USA",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 640.0
+        }
+      ]
+    },
+    {
+      "match_id": "1332ff25-4de7-4bec-b1ba-fe26a8d278a8",
+      "home_team": "Inter Miami",
+      "away_team": "New York Red Bulls",
+      "match_date": "2026-04-12",
+      "match_time": "00:30",
+      "league_id": "e3bc7110-863e-48d8-b2b4-ce8dc3f07421",
+      "league_name": "MLS",
+      "country": "USA",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 876.5
+        }
+      ]
+    },
+    {
+      "match_id": "e9bdbcab-4200-45de-9397-b49bb0c8b70b",
+      "home_team": "New England Revolution",
+      "away_team": "DC United",
+      "match_date": "2026-04-12",
+      "match_time": "00:30",
+      "league_id": "e3bc7110-863e-48d8-b2b4-ce8dc3f07421",
+      "league_name": "MLS",
+      "country": "USA",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 671.5
+        }
+      ]
+    },
+    {
+      "match_id": "2965aa09-f344-4e7e-b664-6f795ddaf060",
+      "home_team": "Vancouver Whitecaps",
+      "away_team": "New York City",
+      "match_date": "2026-04-12",
+      "match_time": "00:30",
+      "league_id": "e3bc7110-863e-48d8-b2b4-ce8dc3f07421",
+      "league_name": "MLS",
+      "country": "USA",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 664.0
+        }
+      ]
+    },
+    {
+      "match_id": "6d3e05fb-fd21-4669-8c73-7e9224d152a7",
+      "home_team": "Chicago Fire",
+      "away_team": "Atlanta Utd",
+      "match_date": "2026-04-12",
+      "match_time": "01:30",
+      "league_id": "e3bc7110-863e-48d8-b2b4-ce8dc3f07421",
+      "league_name": "MLS",
+      "country": "USA",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 694.2
+        }
+      ]
+    },
+    {
+      "match_id": "433c49f6-c5fc-4ea4-ae1f-003838ae9b43",
+      "home_team": "FC Dallas",
+      "away_team": "St. Louis City",
+      "match_date": "2026-04-12",
+      "match_time": "01:30",
+      "league_id": "e3bc7110-863e-48d8-b2b4-ce8dc3f07421",
+      "league_name": "MLS",
+      "country": "USA",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 710.8
+        }
+      ]
+    },
+    {
+      "match_id": "2ca3f697-4e61-4514-bd3c-5c884eccee21",
+      "home_team": "Sporting Kansas City",
+      "away_team": "San Jose Earthquakes",
+      "match_date": "2026-04-12",
+      "match_time": "01:30",
+      "league_id": "e3bc7110-863e-48d8-b2b4-ce8dc3f07421",
+      "league_name": "MLS",
+      "country": "USA",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 721.8
+        }
+      ]
+    },
+    {
+      "match_id": "1da8b914-dea6-46a0-ba53-e7fddd3a5963",
+      "home_team": "Colorado Rapids",
+      "away_team": "Houston Dynamo",
+      "match_date": "2026-04-12",
+      "match_time": "02:30",
+      "league_id": "e3bc7110-863e-48d8-b2b4-ce8dc3f07421",
+      "league_name": "MLS",
+      "country": "USA",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 659.1
+        }
+      ]
+    },
+    {
+      "match_id": "9ea2dc77-bd10-41b1-a8c5-d0421d8ca853",
+      "home_team": "San Diego FC",
+      "away_team": "Minnesota United",
+      "match_date": "2026-04-12",
+      "match_time": "03:30",
+      "league_id": "e3bc7110-863e-48d8-b2b4-ce8dc3f07421",
+      "league_name": "MLS",
+      "country": "USA",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 684.4
+        }
+      ]
+    },
+    {
+      "match_id": "27fe91f7-bb38-4812-9c3b-ea1f2d51d5e4",
+      "home_team": "Dordrecht",
+      "away_team": "ADO Den Haag",
+      "match_date": "2026-04-12",
+      "match_time": "10:15",
+      "league_id": "34b551b1-2d73-47aa-9772-c949a139f413",
+      "league_name": "Eerste Divisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 602.2
+        }
+      ]
+    },
+    {
+      "match_id": "a50c4dd6-88f6-4b53-ad36-e82818b722ab",
+      "home_team": "For Sittard",
+      "away_team": "NAC Breda",
+      "match_date": "2026-04-12",
+      "match_time": "11:15",
+      "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
+      "league_name": "Eredivisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": 1.66,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 602.9
+        }
+      ]
+    },
+    {
+      "match_id": "d1c00c50-6bca-4d45-83a7-7f789b3204e7",
+      "home_team": "Persib",
+      "away_team": "Bali United",
+      "match_date": "2026-04-12",
+      "match_time": "12:00",
+      "league_id": "b3cf7cda-3e37-4218-9af7-1cd8834a61bf",
+      "league_name": "Liga 1",
+      "country": "Indonesia",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 627.9
+        }
+      ]
+    },
+    {
+      "match_id": "a2a36bb7-167b-492a-af09-86b566627752",
+      "home_team": "Bochum",
+      "away_team": "Braunschweig",
+      "match_date": "2026-04-12",
+      "match_time": "12:30",
+      "league_id": "73a8807f-1971-42a2-8c70-b6bdd1d21b02",
+      "league_name": "2. Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.62,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 677.6
+        }
+      ]
+    },
+    {
+      "match_id": "0d5418c2-dad4-46c8-a76e-d1ab92c9b849",
+      "home_team": "Elversberg",
+      "away_team": "Schalke 04",
+      "match_date": "2026-04-12",
+      "match_time": "12:30",
+      "league_id": "73a8807f-1971-42a2-8c70-b6bdd1d21b02",
+      "league_name": "2. Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.73,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 602.6
+        }
+      ]
+    },
+    {
+      "match_id": "63d730f1-0585-4f58-bf35-1f92057d31d0",
+      "home_team": "Paderborn",
+      "away_team": "Magdeburg",
+      "match_date": "2026-04-12",
+      "match_time": "12:30",
+      "league_id": "73a8807f-1971-42a2-8c70-b6bdd1d21b02",
+      "league_name": "2. Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.44,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 838.7
+        }
+      ]
+    },
+    {
+      "match_id": "03e61852-35dc-4943-9e93-fde6c06b0533",
+      "home_team": "Beijing Guoan",
+      "away_team": "Chengdu Rongcheng",
+      "match_date": "2026-04-12",
+      "match_time": "12:35",
+      "league_id": "77293295-e9fa-4d26-9605-16d3eca1b050",
+      "league_name": "Super League",
+      "country": "China",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 644.1
+        }
+      ]
+    },
+    {
+      "match_id": "fc2f30a7-ab04-41f9-abf1-cca85b36038c",
+      "home_team": "Maritimo",
+      "away_team": "Portimonense",
+      "match_date": "2026-04-12",
+      "match_time": "13:00",
+      "league_id": "ee5f0e5a-51bb-4469-be07-ed91af2e5c3c",
+      "league_name": "Segunda Liga",
+      "country": "Portugal",
+      "signal": "A",
+      "avg_over_25_odds": 1.76,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 600.1
+        }
+      ]
+    },
+    {
+      "match_id": "dec70f8e-264c-4e64-91c2-5818becb11f8",
+      "home_team": "Nijmegen",
+      "away_team": "Feyenoord",
+      "match_date": "2026-04-12",
+      "match_time": "13:30",
+      "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
+      "league_name": "Eredivisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": 1.37,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 765.9
+        }
+      ]
+    },
+    {
+      "match_id": "e96af11e-3c14-46a0-943f-4a2a9c1e94be",
+      "home_team": "FC Koln",
+      "away_team": "Werder Bremen",
+      "match_date": "2026-04-12",
+      "match_time": "14:30",
+      "league_id": "dddcc6b7-8f1c-4540-9fe4-0fce80747c62",
+      "league_name": "Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.7,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 606.3
+        }
+      ]
+    },
+    {
+      "match_id": "cc82b327-0a7b-414e-bb84-27b99d0342d8",
+      "home_team": "Erzgebirge Aue",
+      "away_team": "Verl",
+      "match_date": "2026-04-12",
+      "match_time": "14:30",
+      "league_id": "7bbd6e7f-a730-4ad6-9d12-73479d540951",
+      "league_name": "3. Liga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 647.4
+        }
+      ]
+    },
+    {
+      "match_id": "efcdab56-9b17-406f-bc06-97214e79a404",
+      "home_team": "AZ Alkmaar",
+      "away_team": "Heerenveen",
+      "match_date": "2026-04-12",
+      "match_time": "15:45",
+      "league_id": "ffeb5a83-e585-4d09-8d71-1a27596f57ee",
+      "league_name": "Eredivisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": 1.35,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 826.0
+        }
+      ]
+    },
+    {
+      "match_id": "64a0f8f3-b128-44a2-8b5d-b8160f3f267e",
+      "home_team": "Molde",
+      "away_team": "HamKam",
+      "match_date": "2026-04-12",
+      "match_time": "16:00",
+      "league_id": "2dd91617-1721-4f92-af4c-617ebccb3905",
+      "league_name": "Eliteserien",
+      "country": "Norway",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 664.6
+        }
+      ]
+    },
+    {
+      "match_id": "759968a1-5dcf-48d6-976c-6824a97005ae",
+      "home_team": "Chelsea",
+      "away_team": "Man City",
+      "match_date": "2026-04-12",
+      "match_time": "16:30",
+      "league_id": "4345a182-9c71-49d0-96dc-316fa1dcf350",
+      "league_name": "Premier League",
+      "country": "England",
+      "signal": "A",
+      "avg_over_25_odds": 1.54,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 668.7
+        }
+      ]
+    },
+    {
+      "match_id": "3e12d0a0-12f0-4c3e-8705-239907061124",
+      "home_team": "Stuttgart",
+      "away_team": "Hamburg",
+      "match_date": "2026-04-12",
+      "match_time": "16:30",
+      "league_id": "dddcc6b7-8f1c-4540-9fe4-0fce80747c62",
+      "league_name": "Bundesliga",
+      "country": "Germany",
+      "signal": "A",
+      "avg_over_25_odds": 1.44,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 676.7
+        }
+      ]
+    },
+    {
+      "match_id": "b0ec6eb0-3133-4b30-86bf-b54853ed2b97",
+      "home_team": "Lech Poznan",
+      "away_team": "GKS Katowice",
+      "match_date": "2026-04-12",
+      "match_time": "16:30",
+      "league_id": "7f1673e6-57d3-49d1-822d-08a1f734094b",
+      "league_name": "Ekstraklasa",
+      "country": "Poland",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 647.4
+        }
+      ]
+    },
+    {
+      "match_id": "df03da1f-4f13-4303-84f9-7d511fa5008d",
+      "home_team": "Maccabi Haifa",
+      "away_team": "Ironi Kiryat Shmona",
+      "match_date": "2026-04-12",
+      "match_time": "17:00",
+      "league_id": "08c3c33a-3517-4764-a020-357f308137c8",
+      "league_name": "Ligat Ha'al",
+      "country": "Israel",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 610.7
+        }
+      ]
+    },
+    {
+      "match_id": "00462565-2aa5-4696-b634-d033f0628527",
+      "home_team": "Anderlecht",
+      "away_team": "Gent",
+      "match_date": "2026-04-12",
+      "match_time": "17:30",
+      "league_id": "4768e1ba-71ce-43a5-afb9-d02ea1299bdb",
+      "league_name": "Jupiler Pro League",
+      "country": "Belgium",
+      "signal": "A",
+      "avg_over_25_odds": 1.62,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 668.6
+        }
+      ]
+    },
+    {
+      "match_id": "8fbeec70-51e0-40c4-9f6b-57ebbbd506d8",
+      "home_team": "Benfica",
+      "away_team": "Nacional",
+      "match_date": "2026-04-12",
+      "match_time": "18:00",
+      "league_id": "14dbce63-e0df-4d7d-b5cd-a003f395f276",
+      "league_name": "Primeira Liga",
+      "country": "Portugal",
+      "signal": "A",
+      "avg_over_25_odds": 1.32,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 1184.3
+        }
+      ]
+    },
+    {
+      "match_id": "40756378-4449-47cc-a6ba-1678911646d3",
+      "home_team": "Sp Braga",
+      "away_team": "Arouca",
+      "match_date": "2026-04-12",
+      "match_time": "18:00",
+      "league_id": "14dbce63-e0df-4d7d-b5cd-a003f395f276",
+      "league_name": "Primeira Liga",
+      "country": "Portugal",
+      "signal": "A",
+      "avg_over_25_odds": 1.64,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 636.8
+        }
+      ]
+    },
+    {
+      "match_id": "6cdc61c0-64a9-4ddf-bbe8-380188793b63",
+      "home_team": "Galatasaray",
+      "away_team": "Kocaelispor",
+      "match_date": "2026-04-12",
+      "match_time": "18:00",
+      "league_id": "1e8cadbf-4ce5-4bce-948d-c795ec5f8265",
+      "league_name": "S\u00fcper Lig",
+      "country": "Turkey",
+      "signal": "A",
+      "avg_over_25_odds": 1.51,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 611.0
+        }
+      ]
+    },
+    {
+      "match_id": "8f9873f4-18a3-40bd-a3d8-85561a9487f6",
+      "home_team": "Brann",
+      "away_team": "Sandefjord",
+      "match_date": "2026-04-12",
+      "match_time": "18:15",
+      "league_id": "2dd91617-1721-4f92-af4c-617ebccb3905",
+      "league_name": "Eliteserien",
+      "country": "Norway",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 661.5
+        }
+      ]
+    },
+    {
+      "match_id": "d124280b-62e4-4e33-a2a6-742f327a1f7f",
+      "home_team": "Santander",
+      "away_team": "Almeria",
+      "match_date": "2026-04-12",
+      "match_time": "20:00",
+      "league_id": "47a917a8-10ab-41e7-a9e1-e7c24159d145",
+      "league_name": "Segunda Divisi\u00f3n",
+      "country": "Spain",
+      "signal": "A",
+      "avg_over_25_odds": 1.53,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 679.0
+        }
+      ]
+    },
+    {
+      "match_id": "3efe9fcc-4c39-4fac-90a3-85a7416f4d5a",
+      "home_team": "Estoril",
+      "away_team": "Porto",
+      "match_date": "2026-04-12",
+      "match_time": "20:30",
+      "league_id": "14dbce63-e0df-4d7d-b5cd-a003f395f276",
+      "league_name": "Primeira Liga",
+      "country": "Portugal",
+      "signal": "A",
+      "avg_over_25_odds": 1.66,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 676.9
+        }
+      ]
+    },
+    {
+      "match_id": "666f13a9-20d2-468f-83fa-0d1a918b3693",
       "home_team": "Utrecht II",
       "away_team": "Vitesse",
       "match_date": "2026-04-13",
@@ -286,12 +1600,12 @@
       "alerts": [
         {
           "market": "over_25",
-          "confidence_score": 629.4
+          "confidence_score": 655.4
         }
       ]
     },
     {
-      "match_id": "b599891c-4df2-4b55-afc7-7ff181b23033",
+      "match_id": "e50224ac-f9ad-424e-8e58-c6a4d8112e29",
       "home_team": "AZ II",
       "away_team": "PSV II",
       "match_date": "2026-04-13",
@@ -304,12 +1618,66 @@
       "alerts": [
         {
           "market": "over_25",
-          "confidence_score": 632.8
+          "confidence_score": 691.8
         }
       ]
     },
     {
-      "match_id": "77d04206-d469-4534-b9fd-e3b2c33e5cbc",
+      "match_id": "5c8042ec-a4ca-4b22-957a-0daa5d7fede4",
+      "home_team": "Rizespor",
+      "away_team": "Gaziantep",
+      "match_date": "2026-04-13",
+      "match_time": "18:00",
+      "league_id": "1e8cadbf-4ce5-4bce-948d-c795ec5f8265",
+      "league_name": "S\u00fcper Lig",
+      "country": "Turkey",
+      "signal": "A",
+      "avg_over_25_odds": 1.62,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 656.0
+        }
+      ]
+    },
+    {
+      "match_id": "2a8c1f01-dda6-4202-99a3-0f9ca2b42125",
+      "home_team": "Man United",
+      "away_team": "Leeds",
+      "match_date": "2026-04-13",
+      "match_time": "20:00",
+      "league_id": "4345a182-9c71-49d0-96dc-316fa1dcf350",
+      "league_name": "Premier League",
+      "country": "England",
+      "signal": "A",
+      "avg_over_25_odds": 1.68,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 659.1
+        }
+      ]
+    },
+    {
+      "match_id": "9056e7bf-ffab-4edb-957c-8766a29469b4",
+      "home_team": "Columbus Crew",
+      "away_team": "Orlando City",
+      "match_date": "2026-04-13",
+      "match_time": "",
+      "league_id": "e3bc7110-863e-48d8-b2b4-ce8dc3f07421",
+      "league_name": "MLS",
+      "country": "USA",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 797.2
+        }
+      ]
+    },
+    {
+      "match_id": "58b5a330-4c9f-401b-8e87-cb95a5a7d6e6",
       "home_team": "Ferencvaros",
       "away_team": "Puskas",
       "match_date": "2026-04-14",
@@ -322,7 +1690,151 @@
       "alerts": [
         {
           "market": "over_25",
-          "confidence_score": 618.9
+          "confidence_score": 663.4
+        }
+      ]
+    },
+    {
+      "match_id": "2ad2d8f5-4278-4af4-9dc8-04ef787e63ad",
+      "home_team": "Al Nassr",
+      "away_team": "Al Ittifaq",
+      "match_date": "2026-04-15",
+      "match_time": "18:00",
+      "league_id": "3d53d6d3-eacf-409b-887f-27160051b664",
+      "league_name": "Saudi Pro League",
+      "country": "Saudi Arabia",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 682.0
+        }
+      ]
+    },
+    {
+      "match_id": "68329a81-b89d-4175-aab1-4d1ba8f4d1c5",
+      "home_team": "Qarabag",
+      "away_team": "Sabah",
+      "match_date": "2026-04-17",
+      "match_time": "15:00",
+      "league_id": "de44b010-fca2-4988-be89-a15564028f5e",
+      "league_name": "Premyer Liqa",
+      "country": "Azerbaijan",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 676.5
+        }
+      ]
+    },
+    {
+      "match_id": "43dadc9b-7450-48a0-9e39-d8be4bbc5fe8",
+      "home_team": "Helmond Sport",
+      "away_team": "VVV",
+      "match_date": "2026-04-17",
+      "match_time": "18:00",
+      "league_id": "34b551b1-2d73-47aa-9772-c949a139f413",
+      "league_name": "Eerste Divisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 608.9
+        }
+      ]
+    },
+    {
+      "match_id": "fd47e892-78b3-465a-a66d-e464631148b8",
+      "home_team": "Vitesse",
+      "away_team": "MVV",
+      "match_date": "2026-04-17",
+      "match_time": "18:00",
+      "league_id": "34b551b1-2d73-47aa-9772-c949a139f413",
+      "league_name": "Eerste Divisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 645.9
+        }
+      ]
+    },
+    {
+      "match_id": "9cacf22e-655b-4da5-a125-90e0fd453279",
+      "home_team": "De Graafschap",
+      "away_team": "Cambuur",
+      "match_date": "2026-04-17",
+      "match_time": "18:00",
+      "league_id": "34b551b1-2d73-47aa-9772-c949a139f413",
+      "league_name": "Eerste Divisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 683.2
+        }
+      ]
+    },
+    {
+      "match_id": "e16495ed-1cb2-4783-80bc-21f7bcb0bbb8",
+      "home_team": "TOP Oss",
+      "away_team": "Den Bosch",
+      "match_date": "2026-04-17",
+      "match_time": "18:00",
+      "league_id": "34b551b1-2d73-47aa-9772-c949a139f413",
+      "league_name": "Eerste Divisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 661.5
+        }
+      ]
+    },
+    {
+      "match_id": "35d65fab-8652-4e32-bb45-027331c8f0e0",
+      "home_team": "ADO Den Haag",
+      "away_team": "RKC Waalwijk",
+      "match_date": "2026-04-17",
+      "match_time": "18:00",
+      "league_id": "34b551b1-2d73-47aa-9772-c949a139f413",
+      "league_name": "Eerste Divisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 611.6
+        }
+      ]
+    },
+    {
+      "match_id": "93f3bf7f-3797-4d05-b314-06caa774488a",
+      "home_team": "Utrecht II",
+      "away_team": "Eindhoven",
+      "match_date": "2026-04-17",
+      "match_time": "18:00",
+      "league_id": "34b551b1-2d73-47aa-9772-c949a139f413",
+      "league_name": "Eerste Divisie",
+      "country": "Netherlands",
+      "signal": "A",
+      "avg_over_25_odds": null,
+      "alerts": [
+        {
+          "market": "over_25",
+          "confidence_score": 668.5
         }
       ]
     }
