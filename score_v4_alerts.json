@@ -30,12 +30,12 @@
     "confidence": "low"
   },
   {
-    "match_id": 14059965,
+    "match_id": 14317569,
     "match_date": "2026-04-18",
-    "match_time": "16:00",
-    "home_team": "Swansea City",
-    "away_team": "Southampton",
-    "league_name": "Championship",
+    "match_time": "15:00",
+    "home_team": "Bari",
+    "away_team": "Venezia",
+    "league_name": "Serie B",
     "prob_cal": 0.9404,
     "confidence": "low"
   },
@@ -327,16 +327,6 @@
     "away_team": "Jong AZ Alkmaar",
     "league_name": "Eerste Divisie",
     "prob_cal": 0.9454,
-    "confidence": "low"
-  },
-  {
-    "match_id": 15552492,
-    "match_date": "2026-04-17",
-    "match_time": "13:35",
-    "home_team": "Shandong Taishan",
-    "away_team": "Shanghai Port",
-    "league_name": "Chinese Super League",
-    "prob_cal": 0.9404,
     "confidence": "low"
   },
   {
