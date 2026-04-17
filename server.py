@@ -19,8 +19,9 @@ from fastapi import FastAPI, Response
 BOT_TOKEN = os.environ["BOT_TOKEN"]           # 🔐 DA RENDER
 CHAT_ID = int(os.environ["CHAT_ID"])          # 🔐 DA RENDER
 
-# Un solo file: partite da monitorare per Over 0.5 2T
-T2_FILE = Path("./score_2t_alerts.json")   # over_25 cs >= 600
+# File v4 (Over 0.5 — Profeta v4, alert +10min dal kick-off)
+V4_FILE = Path("./score_v4_alerts.json")
+
 SENT_ALERTS_FILE = Path("./sent_alerts.json")
 
 CHECK_EVERY_SECONDS = 300      # 5 minuti
@@ -28,8 +29,8 @@ TIME_TOLERANCE_MINUTES = 3     # ±3 minuti
 
 TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 
-# Alert inviato al kick-off (0 min) come reminder da monitorare durante il 1° tempo
-PRE_MATCH_OFFSET_MINUTES = 0   # esattamente al kick-off
+# v4: alert 10 minuti DOPO il kick-off
+V4_POST_KICKOFF_MINUTES = 10
 
 # ==========================
 # LOGGING
@@ -127,52 +128,50 @@ def check_and_send_alerts():
     tolerance = timedelta(minutes=TIME_TOLERANCE_MINUTES)
 
     sent_alerts = load_sent_alerts()
-    t2_fixtures = _load_fixtures(T2_FILE)
-    logger.info("🔍 2T fixtures: %d", len(t2_fixtures))
 
-    to_send = []
+    # ── v4: Over 2.5 superalert — alert +10min dal kick-off ──────────────────
+    v4_fixtures = _load_fixtures(V4_FILE)
+    logger.info("🔍 v4 fixtures: %d", len(v4_fixtures))
 
-    for f in t2_fixtures:
+    to_send_v4 = []
+    for f in v4_fixtures:
         mid = f["match_id"]
-        state = sent_alerts.setdefault(mid, {"sent": False})
+        state = sent_alerts.setdefault(f"v4_{mid}", {"sent": False})
         if state["sent"]:
             continue
         ko, time_known = _kickoff(f)
         if ko is None:
             continue
-        # Per partite con orario noto: alert 30min prima del kick-off
-        # Per partite senza orario: alert alle 08:00 del giorno (offset = 0)
-        offset = timedelta(minutes=PRE_MATCH_OFFSET_MINUTES) if time_known else timedelta(0)
-        alert_time = ko + offset
+        alert_time = ko + timedelta(minutes=V4_POST_KICKOFF_MINUTES)
         if abs(now - alert_time) <= tolerance:
-            to_send.append((ko, f, time_known))
+            to_send_v4.append((ko, f, time_known))
             state["sent"] = True
 
-    if to_send:
+    if to_send_v4:
         from collections import defaultdict
-        groups: dict = defaultdict(list)
-        for ko, f, time_known in to_send:
-            groups[(ko.strftime("%H:%M"), time_known)].append(f)
-
-        for (ko_time, time_known), group in sorted(groups.items()):
-            header = f"👀 *DA MONITORARE — Over 0.5 2T*\n{'─' * 30}\n"
+        groups_v4: dict = defaultdict(list)
+        for ko, f, time_known in to_send_v4:
+            groups_v4[(ko.strftime("%H:%M"), time_known)].append(f)
+        for (ko_time, time_known), group in sorted(groups_v4.items()):
+            header = f"⚽ *OVER 2.5 — Profeta v4*\n{'─' * 30}\n"
             blocks = []
             for f in group:
                 time_note = f"`{ko_time}`" if time_known else "_orario n.d._"
-                league = f.get("league_name") or f.get("league_id", "")
-                country = f.get("country", "")
-                meta = f"{country} · {league}" if country else league
+                league = f.get("league_name", "")
+                prob = f.get("prob_cal", "")
+                conf = (f.get("confidence") or "").upper()
+                prob_str = f" · prob {prob:.0%}" if isinstance(prob, float) else ""
                 blocks.append(
                     f"🏟 *{f['home_team']}* vs *{f['away_team']}*\n"
-                    f"📅 {f.get('match_date', '')} ⏰ {time_note}\n"
-                    f"🏆 _{meta}_"
+                    f"⏰ {time_note}  [{conf}{prob_str}]\n"
+                    f"🏆 _{league}_"
                 )
             ko_label = ko_time if time_known else "orario n.d."
-            footer = f"\n{'─' * 30}\n_Kick-off {ko_label} · Profeta v2 Over 2.5_"
+            footer = f"\n{'─' * 30}\n_+10min dal kick-off {ko_label}_"
             send_telegram_message(header + "\n\n".join(blocks) + footer)
-            logger.info("📤 Inviato %s (%d partite, orario_noto=%s)", ko_label, len(group), time_known)
+            logger.info("📤 v4 over_25 inviato %s (%d partite)", ko_label, len(group))
     else:
-        logger.info("📭 Nessuna partita da inviare in questa iterazione")
+        logger.info("📭 v4: nessuna partita da inviare")
 
     save_sent_alerts(sent_alerts)
 
