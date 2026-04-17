@@ -6,7 +6,7 @@ import json
 import logging
 import requests
 from contextlib import asynccontextmanager
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from dateutil import parser
 from pathlib import Path
 from threading import Event, Thread
@@ -102,21 +102,19 @@ def _load_fixtures(path: Path) -> list:
     return data.get("alerts", data) if isinstance(data, dict) else data
 
 def _kickoff(f) -> tuple[datetime | None, bool]:
-    """Ritorna (datetime, orario_noto). Se orario ignoto usa le 08:00 del giorno della partita."""
+    """Ritorna (datetime UTC-aware, orario_noto). Se orario ignoto usa le 08:00 UTC del giorno."""
     match_date = f.get("match_date", "")
     match_time = f.get("match_time", "") or ""
     if not match_date:
         return None, False
     if not match_time or match_time == "00:00":
-        # Orario sconosciuto: schedula alert alle 08:00 del giorno della partita
         try:
-            dt = parser.isoparse(f"{match_date}T08:00:00")
+            dt = parser.isoparse(f"{match_date}T08:00:00+00:00")
             return dt, False
         except Exception:
             return None, False
-    dt_str = f"{match_date}T{match_time}:00"
     try:
-        return parser.isoparse(dt_str), True
+        return parser.isoparse(f"{match_date}T{match_time}:00+00:00"), True
     except Exception:
         return None, False
 
@@ -124,7 +122,7 @@ def _kickoff(f) -> tuple[datetime | None, bool]:
 # CORE LOGIC
 # ==========================
 def check_and_send_alerts():
-    now = datetime.now()
+    now = datetime.now(timezone.utc)
     tolerance = timedelta(minutes=TIME_TOLERANCE_MINUTES)
 
     sent_alerts = load_sent_alerts()
@@ -145,14 +143,15 @@ def check_and_send_alerts():
         alert_time = ko + timedelta(minutes=V4_POST_KICKOFF_MINUTES)
         if abs(now - alert_time) <= tolerance:
             to_send_v4.append((ko, f, time_known))
-            state["sent"] = True
 
     if to_send_v4:
         from collections import defaultdict
         groups_v4: dict = defaultdict(list)
         for ko, f, time_known in to_send_v4:
-            groups_v4[(ko.strftime("%H:%M"), time_known)].append(f)
-        for (ko_time, time_known), group in sorted(groups_v4.items()):
+            groups_v4[(ko.strftime("%H:%M"), time_known)].append((f, time_known))
+
+        for (ko_time, time_known), items in sorted(groups_v4.items()):
+            group = [f for f, _ in items]
             header = f"⚽ *OVER 2.5 — Profeta v4*\n{'─' * 30}\n"
             blocks = []
             for f in group:
@@ -167,13 +166,18 @@ def check_and_send_alerts():
                     f"🏆 _{league}_"
                 )
             ko_label = ko_time if time_known else "orario n.d."
-            footer = f"\n{'─' * 30}\n_+10min dal kick-off {ko_label}_"
-            send_telegram_message(header + "\n\n".join(blocks) + footer)
-            logger.info("📤 v4 over_25 inviato %s (%d partite)", ko_label, len(group))
+            footer = f"\n{'─' * 30}\n_+10min dal kick-off {ko_label} UTC_"
+            try:
+                send_telegram_message(header + "\n\n".join(blocks) + footer)
+                # Marca sent e salva subito — evita duplicati se il processo crasha dopo
+                for f in group:
+                    sent_alerts[f"v4_{f['match_id']}"]["sent"] = True
+                save_sent_alerts(sent_alerts)
+                logger.info("📤 v4 over_25 inviato %s (%d partite)", ko_label, len(group))
+            except Exception:
+                logger.exception("❌ Telegram fallito per gruppo %s — riprovo al prossimo ciclo", ko_label)
     else:
         logger.info("📭 v4: nessuna partita da inviare")
-
-    save_sent_alerts(sent_alerts)
 
 # ==========================
 # CRON LOOP
@@ -181,7 +185,7 @@ def check_and_send_alerts():
 def _cron_loop():
     logger.info("🚀 Cron loop attivo")
     while not stop_event.is_set():
-        logger.info("🕓 Nuova iterazione cron: %s", datetime.now().isoformat())
+        logger.info("🕓 Nuova iterazione cron: %s", datetime.now(timezone.utc).isoformat())
         try:
             check_and_send_alerts()
         except Exception:
