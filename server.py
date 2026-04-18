@@ -29,7 +29,7 @@ V4_FILE = Path("./score_v4_alerts.json")
 
 SENT_ALERTS_FILE = Path("./sent_alerts.json")
 
-CHECK_EVERY_SECONDS = 30       # 30 secondi (debug)
+CHECK_EVERY_SECONDS = 600      # 10 minuti
 TIME_TOLERANCE_MINUTES = 3     # ±3 minuti
 
 TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
